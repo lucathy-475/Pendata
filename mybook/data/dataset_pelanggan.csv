@@ -1,0 +1,181 @@
+ID_Pelanggan;Umur;Penghasilan_Juta;Total_Belanja_Bulanan_Juta;Transaksi_Per_Bulan;Jenis_Kelamin;Kota;Kategori_Favorit;Pendidikan;Frekuensi_Belanja;Tingkat_Kepuasan;Status_Member;Menggunakan_Promo
+1;44;1758;67;4;Perempuan;Surabaya;Elektronik;S2;Kadang;Rendah;0;0
+2;37;1063;49;3;Laki-laki;Bandung;Fashion;S1;Kadang;Rendah;0;0
+3;39;1093;14;1;Perempuan;Semarang;Hobi;S1;Jarang;Sangat Tinggi;1;1
+4;53;1983;24;1;Laki-laki;Jakarta;Hobi;S3;Jarang;Sedang;1;0
+5;18;37;12;1;Laki-laki;Medan;Kebutuhan Harian;SMA/SMK;Jarang;Sedang;0;0
+6;46;1244;36;2;Laki-laki;Semarang;Kebutuhan Harian;S2;Jarang;Rendah;1;0
+7;49;120;55;3;Perempuan;Makassar;Kecantikan;S1;Sering;Tinggi;1;1
+8;53;186;6;3;Perempuan;Makassar;Kecantikan;S3;Kadang;Tinggi;1;1
+9;40;1066;18;1;Laki-laki;Bandung;Kebutuhan Harian;S1;Jarang;Rendah;0;0
+10;36;1033;13;1;Laki-laki;Makassar;Kecantikan;S1;Kadang;Rendah;0;1
+11;23;87;0;0;Laki-laki;Jakarta;Olahraga;SMA/SMK;Jarang;Rendah;0;0
+12;39;865;37;2;Perempuan;Bandung;Kecantikan;D3;Kadang;Sangat Tinggi;0;0
+13;26;628;28;2;Perempuan;Yogyakarta;Kebutuhan Harian;D3;Jarang;Tinggi;0;1
+14;17;30;0;0;Laki-laki;Bandung;Fashion;SMA/SMK;Jarang;Sedang;0;0
+15;35;899;46;3;Laki-laki;Jakarta;Elektronik;S1;Kadang;Tinggi;0;0
+16;25;422;15;1;Perempuan;Denpasar;Kecantikan;SMA/SMK;Kadang;Sedang;0;0
+17;28;1094;6;4;Perempuan;Makassar;Elektronik;S1;Kadang;Tinggi;1;1
+18;41;1692;84;4;Laki-laki;Makassar;Kebutuhan Harian;S2;Kadang;Sangat Tinggi;1;0
+19;44;1323;63;3;Perempuan;Bandung;Fashion;S2;Kadang;Sedang;1;0
+20;41;773;35;2;Perempuan;Jakarta;Kebutuhan Harian;D3;Jarang;Sedang;1;1
+21;32;912;16;1;Perempuan;Jakarta;Hobi;D3;Jarang;Sedang;0;0
+22;43;978;0;0;Perempuan;Yogyakarta;Kebutuhan Harian;S1;Jarang;Tinggi;0;1
+23;49;1595;0;0;Perempuan;Yogyakarta;Hobi;S2;Jarang;Sangat Tinggi;1;1
+24;27;771;12;1;Laki-laki;Bandung;Fashion;D3;Jarang;Rendah;0;1
+25;22;582;13;1;Laki-laki;Jakarta;Kecantikan;D3;Jarang;Rendah;0;0
+26;28;1037;78;6;Perempuan;Semarang;Fashion;S1;Kadang;Sedang;0;0
+27;32;1349;0;0;Laki-laki;Jakarta;Kebutuhan Harian;S1;Kadang;Rendah;0;0
+28;54;1457;125;6;Perempuan;Jakarta;Kebutuhan Harian;S3;Kadang;Sedang;1;0
+29;21;865;43;2;Laki-laki;Denpasar;Fashion;SMA/SMK;Jarang;Sangat Tinggi;1;1
+30;40;1523;83;4;Laki-laki;Jakarta;Olahraga;S1;Sering;Tinggi;1;1
+31;34;1123;17;1;Perempuan;Jakarta;Hobi;D3;Jarang;Rendah;0;0
+32;55;1544;34;2;Laki-laki;Semarang;Kebutuhan Harian;S3;Jarang;Sangat Tinggi;1;1
+33;39;1472;9;5;Laki-laki;Denpasar;Fashion;S1;Kadang;Rendah;1;1
+34;19;487;14;1;Perempuan;Jakarta;Olahraga;SMA/SMK;Jarang;Tinggi;0;1
+35;50;2004;7;3;Perempuan;Medan;Kecantikan;S2;Kadang;Sedang;1;1
+36;35;139;94;5;Perempuan;Jakarta;Kecantikan;S1;Kadang;Sangat Tinggi;1;1
+37;24;331;16;2;Laki-laki;Surabaya;Olahraga;SMA/SMK;Jarang;Rendah;0;0
+38;53;1936;97;4;Laki-laki;Jakarta;Hobi;S3;Kadang;Sedang;1;1
+39;55;2291;141;6;Laki-laki;Bandung;Elektronik;S3;Sering;Sangat Tinggi;1;0
+40;26;578;15;1;Laki-laki;Semarang;Hobi;D3;Jarang;Rendah;0;0
+41;55;1631;18;1;Laki-laki;Jakarta;Kecantikan;S3;Jarang;Tinggi;1;1
+42;36;1131;45;2;Perempuan;Surabaya;Elektronik;S1;Jarang;Rendah;0;0
+43;39;152;149;7;Laki-laki;Surabaya;Kecantikan;S2;Sering;Sangat Tinggi;1;1
+44;29;691;34;2;Laki-laki;Semarang;Hobi;D3;Kadang;Sedang;0;0
+45;22;635;78;4;Perempuan;Bandung;Elektronik;D3;Kadang;Tinggi;1;0
+46;34;1259;37;2;Laki-laki;Surabaya;Kecantikan;S1;Jarang;Sedang;0;1
+47;35;1013;0;0;Laki-laki;Bandung;Kecantikan;S1;Jarang;Rendah;0;0
+48;34;1031;26;2;Perempuan;Semarang;Elektronik;D3;Jarang;Sedang;0;0
+49;37;139;4;3;Perempuan;Surabaya;Elektronik;S2;Sering;Tinggi;1;1
+50;18;375;42;3;Perempuan;Denpasar;Elektronik;SMA/SMK;Jarang;Sedang;0;0
+51;33;982;49;4;Perempuan;Semarang;Kecantikan;D3;Kadang;Sangat Tinggi;1;0
+52;55;149;46;2;Perempuan;Surabaya;Olahraga;S3;Jarang;Rendah;0;0
+53;31;94;21;1;Laki-laki;Surabaya;Kecantikan;D3;Jarang;Sangat Tinggi;0;0
+54;51;1728;121;6;Perempuan;Jakarta;Hobi;S2;Jarang;Sangat Tinggi;1;0
+55;21;822;17;1;Perempuan;Jakarta;Fashion;D3;Jarang;Sedang;0;0
+56;31;993;0;0;Perempuan;Jakarta;Olahraga;D3;Kadang;Rendah;0;0
+57;53;1857;63;3;Perempuan;Surabaya;Elektronik;S3;Jarang;Tinggi;0;1
+58;18;556;27;3;Laki-laki;Surabaya;Fashion;SMA/SMK;Kadang;Sedang;0;0
+59;20;413;0;0;Perempuan;Semarang;Elektronik;SMA/SMK;Jarang;Sedang;0;0
+60;47;837;96;6;Laki-laki;Surabaya;Hobi;S1;Kadang;Sedang;1;1
+61;35;1392;28;2;Laki-laki;Medan;Fashion;S1;Jarang;Tinggi;0;0
+62;32;1143;99;5;Perempuan;Jakarta;Kecantikan;D3;Kadang;Sangat Tinggi;1;1
+63;47;1495;74;3;Perempuan;Bandung;Kebutuhan Harian;S3;Jarang;Sangat Tinggi;1;0
+64;42;1195;43;2;Perempuan;Denpasar;Hobi;S1;Jarang;Sedang;0;0
+65;53;1426;52;3;Laki-laki;Semarang;Hobi;S3;Kadang;Tinggi;0;1
+66;23;497;27;2;Laki-laki;Semarang;Kecantikan;SMA/SMK;Jarang;Sedang;0;0
+67;46;1347;56;3;Laki-laki;Jakarta;Hobi;S2;Kadang;Sedang;1;1
+68;38;978;32;2;Laki-laki;Surabaya;Olahraga;S1;Jarang;Rendah;0;0
+69;39;1107;0;0;Laki-laki;Surabaya;Fashion;D3;Jarang;Sangat Tinggi;0;1
+70;29;589;42;2;Laki-laki;Yogyakarta;Kebutuhan Harian;D3;Jarang;Sedang;0;0
+71;44;1429;37;2;Perempuan;Makassar;Fashion;S1;Jarang;Sedang;0;0
+72;43;1085;51;3;Laki-laki;Yogyakarta;Fashion;S1;Kadang;Sedang;1;1
+73;49;1636;115;5;Perempuan;Yogyakarta;Kecantikan;S2;Sering;Sedang;1;1
+74;43;1196;135;6;Perempuan;Bandung;Fashion;S1;Kadang;Tinggi;0;1
+75;36;1267;18;1;Perempuan;Denpasar;Kecantikan;S1;Jarang;Rendah;0;1
+76;21;561;74;4;Perempuan;Yogyakarta;Hobi;SMA/SMK;Kadang;Sedang;0;1
+77;40;1205;41;3;Perempuan;Jakarta;Hobi;S1;Sering;Tinggi;1;0
+78;44;184;35;2;Laki-laki;Makassar;Hobi;S2;Kadang;Rendah;0;0
+79;42;1501;65;3;Laki-laki;Makassar;Fashion;S1;Kadang;Tinggi;0;0
+80;50;1589;87;4;Laki-laki;Jakarta;Fashion;S3;Kadang;Sangat Tinggi;1;1
+81;53;189;88;4;Laki-laki;Makassar;Kecantikan;S3;Sering;Tinggi;1;0
+82;35;1245;4;2;Laki-laki;Surabaya;Kebutuhan Harian;S2;Jarang;Sangat Tinggi;1;0
+83;55;1998;156;6;Laki-laki;Yogyakarta;Olahraga;S3;Kadang;Sedang;1;0
+84;43;868;0;0;Laki-laki;Yogyakarta;Fashion;D3;Jarang;Tinggi;0;0
+85;52;1545;0;0;Perempuan;Jakarta;Kecantikan;S2;Jarang;Sangat Tinggi;0;0
+86;39;792;7;4;Perempuan;Semarang;Kecantikan;S1;Kadang;Sedang;0;0
+87;31;614;49;3;Perempuan;Medan;Kecantikan;D3;Kadang;Rendah;0;0
+88;45;1581;75;4;Laki-laki;Bandung;Fashion;S2;Kadang;Tinggi;1;0
+89;43;1379;0;0;Perempuan;Denpasar;Kecantikan;S1;Jarang;Sedang;0;0
+90;49;1521;135;7;Perempuan;Makassar;Fashion;S2;Sering;Sedang;1;0
+91;21;30;51;3;Laki-laki;Jakarta;Fashion;SMA/SMK;Kadang;Sedang;0;1
+92;32;1136;18;1;Laki-laki;Surabaya;Olahraga;S1;Jarang;Sedang;1;0
+93;54;2171;26;1;Perempuan;Makassar;Kecantikan;S3;Jarang;Tinggi;1;0
+94;38;902;16;1;Laki-laki;Bandung;Olahraga;S1;Kadang;Rendah;0;1
+95;39;1046;47;3;Perempuan;Semarang;Kecantikan;D3;Jarang;Rendah;0;1
+96;22;303;38;3;Laki-laki;Medan;Kecantikan;SMA/SMK;Sering;Tinggi;1;0
+97;53;1769;45;2;Perempuan;Medan;Kebutuhan Harian;S3;Jarang;Tinggi;1;1
+98;39;1325;38;2;Laki-laki;Jakarta;Kecantikan;S1;Jarang;Tinggi;1;1
+99;30;735;13;1;Laki-laki;Semarang;Olahraga;D3;Jarang;Sedang;0;0
+100;27;1033;13;1;Perempuan;Semarang;Elektronik;S1;Jarang;Sangat Tinggi;0;0
+101;51;1719;122;8;Perempuan;Surabaya;Kebutuhan Harian;S2;Sering;Sangat Tinggi;0;1
+102;31;627;0;0;Laki-laki;Yogyakarta;Fashion;D3;Jarang;Sedang;0;0
+103;37;985;12;1;Laki-laki;Jakarta;Elektronik;S1;Jarang;Tinggi;0;0
+104;24;481;0;0;Laki-laki;Bandung;Kebutuhan Harian;SMA/SMK;Jarang;Tinggi;1;0
+105;54;192;79;4;Laki-laki;Jakarta;Hobi;S3;Kadang;Sedang;1;1
+106;44;1719;53;3;Laki-laki;Jakarta;Elektronik;S1;Kadang;Sangat Tinggi;0;1
+107;34;79;3;2;Laki-laki;Medan;Fashion;D3;Jarang;Rendah;0;0
+108;48;1413;94;6;Laki-laki;Yogyakarta;Kecantikan;S2;Kadang;Sedang;1;0
+109;43;137;61;3;Laki-laki;Jakarta;Kecantikan;S1;Sering;Tinggi;1;1
+110;24;757;34;2;Perempuan;Surabaya;Kecantikan;SMA/SMK;Jarang;Tinggi;1;1
+111;37;1316;2;1;Laki-laki;Jakarta;Hobi;S1;Jarang;Rendah;1;0
+112;45;1477;7;3;Laki-laki;Yogyakarta;Fashion;S2;Kadang;Rendah;0;0
+113;35;586;1;1;Perempuan;Jakarta;Fashion;D3;Jarang;Rendah;0;0
+114;48;1658;82;3;Laki-laki;Jakarta;Elektronik;S3;Jarang;Rendah;1;0
+115;48;198;64;3;Perempuan;Surabaya;Hobi;S3;Kadang;Rendah;0;0
+116;49;1592;52;3;Laki-laki;Jakarta;Hobi;S2;Kadang;Sedang;1;1
+117;34;673;51;3;Laki-laki;Jakarta;Olahraga;D3;Kadang;Tinggi;0;0
+118;32;816;0;0;Perempuan;Makassar;Fashion;D3;Jarang;Sedang;1;0
+119;40;1301;114;5;Perempuan;Medan;Kebutuhan Harian;S1;Jarang;Sedang;1;1
+120;55;1788;56;3;Perempuan;Medan;Kebutuhan Harian;S3;Kadang;Tinggi;1;1
+121;20;30;32;2;Perempuan;Bandung;Olahraga;SMA/SMK;Jarang;Sangat Tinggi;0;0
+122;55;1597;57;3;Perempuan;Jakarta;Kebutuhan Harian;S3;Jarang;Sangat Tinggi;1;1
+123;20;30;8;1;Laki-laki;Jakarta;Kecantikan;SMA/SMK;Jarang;Sedang;0;0
+124;47;166;18;1;Laki-laki;Jakarta;Elektronik;S2;Jarang;Tinggi;1;0
+125;18;674;41;3;Perempuan;Makassar;Kecantikan;SMA/SMK;Kadang;Tinggi;0;1
+126;42;957;36;2;Laki-laki;Bandung;Hobi;S1;Jarang;Rendah;0;0
+127;27;881;95;6;Laki-laki;Jakarta;Olahraga;D3;Kadang;Sedang;1;1
+128;27;913;24;2;Perempuan;Jakarta;Kecantikan;D3;Jarang;Sangat Tinggi;0;0
+129;20;30;0;0;Laki-laki;Surabaya;Hobi;SMA/SMK;Jarang;Sangat Tinggi;0;0
+130;32;965;38;3;Perempuan;Jakarta;Kebutuhan Harian;D3;Kadang;Sedang;0;0
+131;31;96;3;2;Laki-laki;Jakarta;Olahraga;D3;Jarang;Sedang;0;0
+132;19;56;16;1;Laki-laki;Semarang;Fashion;SMA/SMK;Jarang;Rendah;0;0
+133;45;1544;147;7;Perempuan;Yogyakarta;Kecantikan;S2;Sering;Tinggi;1;1
+134;39;1034;16;1;Perempuan;Surabaya;Kecantikan;S1;Jarang;Sangat Tinggi;0;0
+135;49;1727;101;5;Perempuan;Surabaya;Fashion;S2;Kadang;Tinggi;1;1
+136;48;1177;35;2;Laki-laki;Surabaya;Fashion;S2;Jarang;Sedang;0;1
+137;20;554;15;1;Perempuan;Denpasar;Elektronik;SMA/SMK;Jarang;Sedang;0;1
+138;41;1168;62;3;Perempuan;Jakarta;Kebutuhan Harian;S2;Jarang;Rendah;0;1
+139;21;30;0;0;Laki-laki;Yogyakarta;Hobi;SMA/SMK;Jarang;Sangat Tinggi;0;1
+140;37;905;101;5;Perempuan;Yogyakarta;Fashion;D3;Kadang;Sangat Tinggi;1;1
+141;42;987;39;3;Perempuan;Makassar;Elektronik;D3;Kadang;Tinggi;1;0
+142;32;1451;73;4;Laki-laki;Makassar;Kecantikan;S1;Kadang;Rendah;0;0
+143;32;688;47;3;Perempuan;Semarang;Kebutuhan Harian;D3;Sering;Rendah;0;1
+144;27;91;19;1;Perempuan;Makassar;Kebutuhan Harian;D3;Jarang;Sangat Tinggi;1;0
+145;21;511;31;2;Laki-laki;Jakarta;Elektronik;SMA/SMK;Jarang;Sangat Tinggi;0;1
+146;26;413;19;1;Perempuan;Bandung;Elektronik;D3;Jarang;Rendah;0;0
+147;48;1785;72;3;Perempuan;Jakarta;Hobi;S2;Kadang;Sedang;1;1
+148;38;1009;86;4;Laki-laki;Jakarta;Kecantikan;S1;Jarang;Sangat Tinggi;1;0
+149;38;817;9;5;Laki-laki;Jakarta;Hobi;S2;Kadang;Sedang;0;1
+150;44;1783;18;1;Perempuan;Semarang;Kebutuhan Harian;S2;Kadang;Tinggi;1;1
+151;42;108;59;4;Perempuan;Denpasar;Kecantikan;S1;Kadang;Tinggi;0;0
+152;51;1734;78;4;Laki-laki;Yogyakarta;Elektronik;S2;Kadang;Sangat Tinggi;1;0
+153;18;492;48;3;Perempuan;Surabaya;Elektronik;SMA/SMK;Sering;Tinggi;0;1
+154;54;2035;115;4;Perempuan;Jakarta;Hobi;S3;Kadang;Sangat Tinggi;1;1
+155;41;1155;39;2;Laki-laki;Jakarta;Kecantikan;S1;Kadang;Rendah;1;0
+156;39;1022;25;2;Perempuan;Makassar;Olahraga;D3;Jarang;Tinggi;0;0
+157;33;932;0;0;Laki-laki;Bandung;Olahraga;D3;Jarang;Rendah;0;0
+158;45;1752;75;4;Perempuan;Yogyakarta;Kecantikan;S2;Kadang;Rendah;1;1
+159;38;1277;57;3;Laki-laki;Denpasar;Fashion;S1;Kadang;Sedang;0;0
+160;52;1386;0;0;Laki-laki;Jakarta;Olahraga;S1;Jarang;Rendah;1;1
+161;49;1265;3;2;Perempuan;Makassar;Hobi;S1;Kadang;Sedang;0;0
+162;45;1302;37;2;Laki-laki;Surabaya;Hobi;S2;Jarang;Sedang;0;1
+163;39;833;0;0;Laki-laki;Bandung;Hobi;D3;Jarang;Rendah;0;0
+164;50;1639;69;4;Laki-laki;Bandung;Elektronik;S3;Kadang;Tinggi;1;1
+165;44;1417;36;2;Laki-laki;Semarang;Elektronik;S1;Jarang;Tinggi;1;1
+166;39;918;34;2;Perempuan;Semarang;Fashion;S1;Jarang;Sangat Tinggi;0;0
+167;49;1349;47;2;Laki-laki;Semarang;Kecantikan;S2;Jarang;Tinggi;0;0
+168;27;744;28;2;Perempuan;Denpasar;Kecantikan;D3;Jarang;Sangat Tinggi;1;1
+169;52;1586;12;6;Perempuan;Denpasar;Elektronik;S3;Kadang;Sedang;1;0
+170;36;1354;15;1;Perempuan;Surabaya;Kebutuhan Harian;S1;Jarang;Rendah;0;0
+171;36;938;79;3;Laki-laki;Bandung;Olahraga;D3;Kadang;Sedang;1;0
+172;54;1803;63;3;Laki-laki;Jakarta;Hobi;S3;Kadang;Sedang;1;0
+173;39;1185;72;4;Laki-laki;Semarang;Elektronik;S1;Kadang;Sangat Tinggi;1;1
+174;24;927;21;1;Laki-laki;Medan;Fashion;D3;Jarang;Rendah;0;0
+175;55;1971;92;4;Laki-laki;Bandung;Olahraga;S3;Kadang;Tinggi;1;0
+176;52;1471;65;4;Laki-laki;Makassar;Olahraga;S2;Kadang;Rendah;1;0
+177;35;991;19;1;Laki-laki;Bandung;Fashion;D3;Jarang;Rendah;0;1
+178;32;671;15;1;Laki-laki;Bandung;Olahraga;D3;Jarang;Rendah;0;0
+179;18;30;6;1;Laki-laki;Medan;Fashion;SMA/SMK;Jarang;Tinggi;0;1
+180;38;1466;123;6;Perempuan;Yogyakarta;Fashion;S2;Sering;Tinggi;1;1

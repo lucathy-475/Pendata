@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 1 &#8212; My sample book</title>
+    <title>Distance Measurement &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Iris" href="data-iris.html" />
-    <link rel="prev" title="Data Understanding" href="pertemuan2.html" />
+    <link rel="next" title="Tugas 2" href="tugas2.html" />
+    <link rel="prev" title="Visualisasi Distribusi Data" href="visualisasi-data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,7 +191,7 @@
 
 
 
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tugas 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="data-iris.html">Data Iris</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="analisis-des.html">Analisis Statistik Deskriptif</a></li>
@@ -204,8 +204,7 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="pertemuan3.html">Distance Measurement</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Distance Measurement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2.html">Tugas 2</a></li>
 </ul>
 
@@ -261,7 +260,7 @@
       
       
       
-      <li><a href="_sources/tugas1.ipynb" target="_blank"
+      <li><a href="_sources/pertemuan3.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,7 +344,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 1</h1>
+    <h1>Distance Measurement</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -355,12 +354,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explorasi-data">Explorasi Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan">Tujuan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah">Langkah - Langkah</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-mengukur-jarak-penting-dalam-penambangan-data">Mengapa Mengukur Jarak Penting dalam Penambangan Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dasar-untuk-clustering-pengelompokan">1. Dasar untuk Clustering (Pengelompokan)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digunakan-dalam-k-nearest-neighbors-knn">2. Digunakan dalam K-Nearest Neighbors (KNN)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-kemiripan-data">3. Mengukur Kemiripan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-anomali">4. Deteksi Outlier (Anomali)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berpengaruh-terhadap-akurasi-model">5. Berpengaruh terhadap Akurasi Model</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-dasar">Konsep Dasar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-atribut">Jenis Atribut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standarisasi-data">Standarisasi Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
             </nav>
         </div>
@@ -372,42 +378,110 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
-<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Link to this heading">#</a></h1>
-<section id="explorasi-data">
-<h2>Explorasi Data<a class="headerlink" href="#explorasi-data" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="distance-measurement">
+<h1>Distance Measurement<a class="headerlink" href="#distance-measurement" title="Link to this heading">#</a></h1>
 <section id="pengertian">
-<h3>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h3>
-<p>Explorasi Data adalah tahap dalam proyek sains data yang berfokus pada analisis mendalam terhadap dataset untuk menemukan pola, tren, hubungan antar variabel, dan anomali. Tahap ini sering disebut juga sebagai Exploratory Data Analysis (EDA), yaitu proses untuk “menceritakan kisah” yang ada di balik data melalui analisis statistik dan visualisasi.</p>
+<h2>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<p>Mengukur jarak adalah proses menghitung tingkat kemiripan (similarity) atau ketidaksamaan (dissimilarity) antara dua objek data.
+Konsep ini menjadi dasar dalam berbagai teknik data mining dan machine learning.</p>
 </section>
-<section id="tujuan">
-<h3>Tujuan<a class="headerlink" href="#tujuan" title="Link to this heading">#</a></h3>
+<section id="mengapa-mengukur-jarak-penting-dalam-penambangan-data">
+<h2>Mengapa Mengukur Jarak Penting dalam Penambangan Data?<a class="headerlink" href="#mengapa-mengukur-jarak-penting-dalam-penambangan-data" title="Link to this heading">#</a></h2>
+<p>Dalam data mining, banyak algoritma bekerja berdasarkan konsep kedekatan antar data.
+Jarak adalah cara kuantitatif untuk menentukan seberapa mirip atau berbeda dua data.</p>
+<section id="dasar-untuk-clustering-pengelompokan">
+<h3>1. Dasar untuk Clustering (Pengelompokan)<a class="headerlink" href="#dasar-untuk-clustering-pengelompokan" title="Link to this heading">#</a></h3>
+<p>Algoritma seperti:</p>
 <ul class="simple">
-<li><p>Memahami distribusi data dan karakteristik variabel.</p></li>
-<li><p>Mengidentifikasi pola, tren, dan hubungan antar variabel.</p></li>
-<li><p>Menemukan outlier atau nilai ekstrem yang perlu ditangani.</p></li>
-<li><p>Menguji hipotesis awal yang berkaitan dengan tujuan bisnis.</p></li>
-<li><p>Memberikan insight awal yang bisa menjadi dasar pemodelan.</p></li>
+<li><p>K-Means</p></li>
+<li><p>Hierarchical Clustering</p></li>
+<li><p>DBSCAN</p></li>
+</ul>
+<p>mengelompokkan data berdasarkan jarak antar titik data.</p>
+<p>Contoh:
+Jika dua pelanggan memiliki usia dan pola belanja yang mirip (jaraknya kecil), maka mereka masuk cluster yang sama.</p>
+<p>Tanpa pengukuran jarak → sistem tidak tahu mana data yang dekat atau jauh.</p>
+</section>
+<section id="digunakan-dalam-k-nearest-neighbors-knn">
+<h3>2. Digunakan dalam K-Nearest Neighbors (KNN)<a class="headerlink" href="#digunakan-dalam-k-nearest-neighbors-knn" title="Link to this heading">#</a></h3>
+<p>Pada algoritma KNN =&gt; Data baru mengikuti kelas dari tetangga terdekatnya.
+Jarak menentukan:</p>
+<ul class="simple">
+<li><p>Siapa tetangga terdekat</p></li>
+<li><p>Seberapa dekat mereka</p></li>
+</ul>
+<p>Jika metrik jarak salah → hasil klasifikasi bisa salah.</p>
+</section>
+<section id="mengukur-kemiripan-data">
+<h3>3. Mengukur Kemiripan Data<a class="headerlink" href="#mengukur-kemiripan-data" title="Link to this heading">#</a></h3>
+<p>Digunakan untuk mengetahui:</p>
+<ul class="simple">
+<li><p>Dokumen mana yang paling mirip</p></li>
+<li><p>Produk mana yang serupa</p></li>
+<li><p>Pasien mana yang memiliki kondisi hampir sama</p></li>
+</ul>
+<p>Contoh metrik jarak:</p>
+<ul class="simple">
+<li><p>Euclidean Distance → data numerik</p></li>
+<li><p>Manhattan Distance → data multidimensi</p></li>
+<li><p>Cosine Similarity → data teks</p></li>
+<li><p>Hamming Distance → data biner</p></li>
 </ul>
 </section>
-<section id="langkah-langkah">
-<h3>Langkah - Langkah<a class="headerlink" href="#langkah-langkah" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Analisis Statistik Deskriptif
-Menghitung ukuran pemusatan (mean, median, modus) dan ukuran penyebaran (range, varians, standar deviasi).</p></li>
-<li><p>Visualisasi Distribusi Data
-Menggunakan histogram, boxplot, atau density plot untuk melihat distribusi variabel numerik.</p></li>
-<li><p>Analisis Korelasi
-Menggunakan scatter plot, heatmap, atau matriks korelasi untuk melihat hubungan antar variabel.</p></li>
-<li><p>Identifikasi Outlier &amp; Anomali
-Mendeteksi nilai yang tidak wajar yang bisa memengaruhi analisis.</p></li>
-<li><p>Segmentasi atau Clustering Awal
-Jika relevan, dilakukan segmentasi untuk mengenali kelompok dalam data.</p></li>
-</ol>
+<section id="deteksi-outlier-anomali">
+<h3>4. Deteksi Outlier (Anomali)<a class="headerlink" href="#deteksi-outlier-anomali" title="Link to this heading">#</a></h3>
+<p>Data dengan jarak sangat jauh dari kelompok lain dapat dianggap sebagai anomali.</p>
+<p>Contoh:
+Dalam deteksi fraud, transaksi yang jauh dari pola normal dianggap mencurigakan.</p>
+</section>
+<section id="berpengaruh-terhadap-akurasi-model">
+<h3>5. Berpengaruh terhadap Akurasi Model<a class="headerlink" href="#berpengaruh-terhadap-akurasi-model" title="Link to this heading">#</a></h3>
+<p>Pemilihan jenis jarak sangat krusial:</p>
+<ul class="simple">
+<li><p>Euclidean → numerik dengan skala sama</p></li>
+<li><p>Cosine → teks</p></li>
+<li><p>Hamming → biner</p></li>
+</ul>
+<p>Jika salah memilih metrik:</p>
+<ul class="simple">
+<li><p>Cluster tidak masuk akal</p></li>
+<li><p>Prediksi bias</p></li>
+<li><p>Model gagal</p></li>
+</ul>
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+<section id="konsep-dasar">
+<h2>Konsep Dasar<a class="headerlink" href="#konsep-dasar" title="Link to this heading">#</a></h2>
+<p>Similarity → Nilai 0–1, semakin besar semakin mirip.
+Dissimilarity (Distance) → Nilai minimum 0, semakin kecil semakin mirip.
+Data Matrix → Representasi data dalam baris (objek) dan kolom (atribut).
+Dissimilarity Matrix → Matriks jarak antar objek.</p>
+</section>
+<section id="jenis-atribut">
+<h2>Jenis Atribut<a class="headerlink" href="#jenis-atribut" title="Link to this heading">#</a></h2>
+<p>Nominal → Tanpa urutan
+Ordinal → Ada urutan
+Biner → Dua nilai (simetris &amp; asimetris)
+Numerik → Interval &amp; rasio
+Atribut campuran → Kombinasi beberapa tipe data</p>
+</section>
+<section id="standarisasi-data">
+<h2>Standarisasi Data<a class="headerlink" href="#standarisasi-data" title="Link to this heading">#</a></h2>
+<p>Z-score → Normalisasi menggunakan mean dan standar deviasi.
+Mean Absolute Deviation → Lebih robust terhadap outlier.
+Standarisasi penting agar atribut berskala besar tidak mendominasi perhitungan jarak.</p>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Mengukur jarak adalah fondasi dalam data mining karena hampir semua teknik berbasis pada konsep kedekatan atau kemiripan antar data.</p>
+<p>Tanpa pengukuran jarak:</p>
+<ul class="simple">
+<li><p>Tidak ada clustering efektif</p></li>
+<li><p>Tidak ada KNN</p></li>
+<li><p>Tidak ada deteksi anomali berbasis jarak</p></li>
+<li><p>Tidak ada pengukuran kemiripan yang objektif</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -441,20 +515,20 @@ Jika relevan, dilakukan segmentasi untuk mengenali kelompok dalam data.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="pertemuan2.html"
+       href="visualisasi-data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Understanding</p>
+        <p class="prev-next-title">Visualisasi Distribusi Data</p>
       </div>
     </a>
     <a class="right-next"
-       href="data-iris.html"
+       href="tugas2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Iris</p>
+        <p class="prev-next-title">Tugas 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -474,12 +548,19 @@ Jika relevan, dilakukan segmentasi untuk mengenali kelompok dalam data.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explorasi-data">Explorasi Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan">Tujuan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah">Langkah - Langkah</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-mengukur-jarak-penting-dalam-penambangan-data">Mengapa Mengukur Jarak Penting dalam Penambangan Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dasar-untuk-clustering-pengelompokan">1. Dasar untuk Clustering (Pengelompokan)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digunakan-dalam-k-nearest-neighbors-knn">2. Digunakan dalam K-Nearest Neighbors (KNN)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-kemiripan-data">3. Mengukur Kemiripan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-anomali">4. Deteksi Outlier (Anomali)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berpengaruh-terhadap-akurasi-model">5. Berpengaruh terhadap Akurasi Model</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-dasar">Konsep Dasar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-atribut">Jenis Atribut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standarisasi-data">Standarisasi Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
   </nav></div>
 

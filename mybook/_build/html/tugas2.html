@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tugas 2 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Distance Measurement" href="pertemuan3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    📘 Introduction to Data Mining
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Business Understanding</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan2.html">Data Understanding</a></li>
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-iris.html">Data Iris</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="analisis-des.html">Analisis Statistik Deskriptif</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="visualisasi-data.html">Visualisasi Distribusi Data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan3.html">Distance Measurement</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tugas 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-dataset">Ringkasan Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-data">Struktur Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif-numerik">Statistik Deskriptif (Numerik)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-variabel-ordinal">Karakteristik Variabel Ordinal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kualitas-data">Kualitas Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-awal">Kesimpulan Awal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-pelanggan">Visualisasi Data Pelanggan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-penghasilan">1. Distribusi Penghasilan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-jenis-kelamin">2. Distribusi Jenis Kelamin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-kepuasan-pelanggan">3. Distribusi Kepuasan Pelanggan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-jarak-dataset-pelanggan">Mengukur Jarak Dataset Pelanggan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-euclidean-distance">Rumus Euclidean Distance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance-variabel-usia">Euclidean Distance (Variabel: Usia)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-euclidean-distance-variabel-umur">Karakteristik Euclidean Distance (Variabel Umur)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-manhattan-distance">Rumus Manhattan Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manhattan-distance-variabel-penghasilan-juta">Manhattan Distance (Variabel: Penghasilan_Juta)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-manhattan-distance">Karakteristik Manhattan Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-hamming-distance">Rumus Hamming Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-hamming-distance">Karakteristik Hamming Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-metode-distance">Perbandingan Metode Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2">
+<h1>Tugas 2<a class="headerlink" href="#tugas-2" title="Link to this heading">#</a></h1>
+<p>Dataset yang digunakan merupakan data pelanggan
+<a class="reference download internal" download="" href="_downloads/0eb5e8f5716ae2d690f9a3953a6a1ee3/dataset_pelanggan.csv"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">dataset_pelanggan.csv</span></code></span></a></p>
+<section id="ringkasan-dataset">
+<h2>Ringkasan Dataset<a class="headerlink" href="#ringkasan-dataset" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Jumlah observasi: 180 pelanggan</p></li>
+<li><p>Jumlah variabel: 13 kolom</p></li>
+<li><p>Missing value: Tidak ada</p></li>
+<li><p>Jenis data: Numerik, Nominal, Ordinal, dan Biner (data campuran)</p></li>
+</ul>
+<p>Dataset ini termasuk dalam kategori mixed data, karena mengandung kombinasi variabel numerik (misalnya umur dan penghasilan), variabel nominal (kota dan kategori favorit), variabel ordinal (pendidikan dan tingkat kepuasan), serta variabel biner (status member dan penggunaan promo).</p>
+</section>
+<section id="struktur-data">
+<h2>Struktur Data<a class="headerlink" href="#struktur-data" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kolom</p></th>
+<th class="head"><p>Tipe Data</p></th>
+<th class="head"><p>Jenis Variabel</p></th>
+<th class="head"><p>Keterangan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ID_Pelanggan</p></td>
+<td><p>int</p></td>
+<td><p>Identifier</p></td>
+<td><p>Nomor unik pelanggan</p></td>
+</tr>
+<tr class="row-odd"><td><p>Umur</p></td>
+<td><p>int</p></td>
+<td><p>Numerik</p></td>
+<td><p>Rentang 17–55 tahun</p></td>
+</tr>
+<tr class="row-even"><td><p>Penghasilan_Juta</p></td>
+<td><p>float</p></td>
+<td><p>Numerik</p></td>
+<td><p>Penghasilan bulanan (dalam satuan numerik tertentu)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total_Belanja_Bulanan_Juta</p></td>
+<td><p>float</p></td>
+<td><p>Numerik</p></td>
+<td><p>Total belanja per bulan (dalam stuan numerik tertentu)</p></td>
+</tr>
+<tr class="row-even"><td><p>Transaksi_Per_Bulan</p></td>
+<td><p>int</p></td>
+<td><p>Numerik</p></td>
+<td><p>Jumlah transaksi per bulan</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jenis_Kelamin</p></td>
+<td><p>object</p></td>
+<td><p>Nominal</p></td>
+<td><p>Laki-laki / Perempuan</p></td>
+</tr>
+<tr class="row-even"><td><p>Kota</p></td>
+<td><p>object</p></td>
+<td><p>Nominal</p></td>
+<td><p>Kota domisili pelanggan</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kategori_Favorit</p></td>
+<td><p>object</p></td>
+<td><p>Nominal</p></td>
+<td><p>Kategori belanja favorit</p></td>
+</tr>
+<tr class="row-even"><td><p>Pendidikan</p></td>
+<td><p>object</p></td>
+<td><p>Ordinal</p></td>
+<td><p>SMA/SMK &lt; D3 &lt; S1 &lt; S2 &lt; S3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frekuensi_Belanja</p></td>
+<td><p>object</p></td>
+<td><p>Ordinal</p></td>
+<td><p>Jarang &lt; Kadang &lt; Sering</p></td>
+</tr>
+<tr class="row-even"><td><p>Tingkat_Kepuasan</p></td>
+<td><p>object</p></td>
+<td><p>Ordinal</p></td>
+<td><p>Rendah &lt; Sedang &lt; Tinggi &lt; Sangat Tinggi</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status_Member</p></td>
+<td><p>int</p></td>
+<td><p>Biner</p></td>
+<td><p>0 = Non-member, 1 = Member</p></td>
+</tr>
+<tr class="row-even"><td><p>Menggunakan_Promo</p></td>
+<td><p>int</p></td>
+<td><p>Biner</p></td>
+<td><p>0 = Tidak, 1 = Ya</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="statistik-deskriptif-numerik">
+<h2>Statistik Deskriptif (Numerik)<a class="headerlink" href="#statistik-deskriptif-numerik" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variabel</p></th>
+<th class="head"><p>Mean</p></th>
+<th class="head"><p>Min</p></th>
+<th class="head"><p>Max</p></th>
+<th class="head"><p>Std Dev</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Umur</p></td>
+<td><p>37.84</p></td>
+<td><p>17</p></td>
+<td><p>55</p></td>
+<td><p>10.83</p></td>
+</tr>
+<tr class="row-odd"><td><p>Penghasilan_Juta</p></td>
+<td><p>11.47</p></td>
+<td><p>3.00</p></td>
+<td><p>22.91</p></td>
+<td><p>4.68</p></td>
+</tr>
+<tr class="row-even"><td><p>Total_Belanja_Bulanan_Juta</p></td>
+<td><p>0.47</p></td>
+<td><p>0.00</p></td>
+<td><p>1.56</p></td>
+<td><p>0.36</p></td>
+</tr>
+<tr class="row-odd"><td><p>Transaksi_Per_Bulan</p></td>
+<td><p>2.54</p></td>
+<td><p>0</p></td>
+<td><p>8</p></td>
+<td><p>1.76</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p>Kolom ID_Pelanggan tidak dianalisis karena hanya berfungsi sebagai identifier.</p>
+</div></blockquote>
+<section id="interpretasi">
+<h3>Interpretasi<a class="headerlink" href="#interpretasi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Rata-rata umur pelanggan adalah sekitar 37–38 tahun.</p></li>
+<li><p>Rata-rata penghasilan pelanggan sekitar 11 juta rupiah per bulan.</p></li>
+<li><p>Pelanggan melakukan sekitar 2–3 transaksi per bulan.</p></li>
+<li><p>Standar deviasi menunjukkan adanya variasi karakteristik pelanggan yang cukup beragam.</p></li>
+</ul>
+</section>
+</section>
+<section id="karakteristik-variabel-ordinal">
+<h2>Karakteristik Variabel Ordinal<a class="headerlink" href="#karakteristik-variabel-ordinal" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Pendidikan</span></code> memiliki 5 kategori:
+(SMA/SMK &lt; D3 &lt; S1 &lt; S2 &lt; S3)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Frekuensi_Belanja</span></code> memiliki 3 kategori:
+(Jarang &lt; Kadang &lt; Sering)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Tingkat_Kepuasan</span></code> memiliki 4 kategori:
+(Rendah &lt; Sedang &lt; Tinggi &lt; Sangat Tinggi)</p></li>
+<li><p>Variabel berbentuk teks (kategori), sehingga perlu dilakukan encoding ordinal jika digunakan dalam perhitungan jarak atau modeling.</p></li>
+</ul>
+</section>
+<section id="kualitas-data">
+<h2>Kualitas Data<a class="headerlink" href="#kualitas-data" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Tidak ada missing value</p></li>
+<li><p>Semua ID_Pelanggan unik (1–180)</p></li>
+<li><p>Tidak ada nilai di luar rentang logis</p></li>
+<li><p>Dataset relatif bersih dan siap dianalisis</p></li>
+<li><p>Dataset termasuk data campuran (numerik, nominal, ordinal, dan biner)</p></li>
+</ul>
+</section>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Hapus kolom <code class="docutils literal notranslate"><span class="pre">ID_Pelanggan</span></code> (karena hanya identifier)</p></li>
+<li><p>Encoding:</p>
+<ul class="simple">
+<li><p>One-Hot Encoding:
+<code class="docutils literal notranslate"><span class="pre">Jenis_Kelamin</span></code>, <code class="docutils literal notranslate"><span class="pre">Kota</span></code>, <code class="docutils literal notranslate"><span class="pre">Kategori_Favorit</span></code></p></li>
+<li><p>Ordinal Encoding:
+<code class="docutils literal notranslate"><span class="pre">Pendidikan</span></code>, <code class="docutils literal notranslate"><span class="pre">Frekuensi_Belanja</span></code>, <code class="docutils literal notranslate"><span class="pre">Tingkat_Kepuasan</span></code></p></li>
+<li><p>Variabel biner (<code class="docutils literal notranslate"><span class="pre">Status_Member</span></code>, <code class="docutils literal notranslate"><span class="pre">Menggunakan_Promo</span></code>) tetap dalam bentuk 0 dan 1</p></li>
+</ul>
+</li>
+<li><p>Scaling numerik:</p>
+<ul class="simple">
+<li><p>Normalisasi ke interval [0,1] jika menggunakan metode berbasis jarak</p></li>
+</ul>
+</li>
+<li><p>Gunakan metode jarak yang sesuai untuk data campuran:</p>
+<ul class="simple">
+<li><p>Gower Distance (ideal)</p></li>
+<li><p>Jika tidak tersedia, gunakan Euclidean setelah encoding dan normalisasi</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="kesimpulan-awal">
+<h2>Kesimpulan Awal<a class="headerlink" href="#kesimpulan-awal" title="Link to this heading">#</a></h2>
+<p>Dataset terdiri dari 180 pelanggan dengan karakteristik demografis dan perilaku belanja.</p>
+<p>Data sudah bersih dan dapat langsung digunakan untuk:</p>
+<ul class="simple">
+<li><p>Analisis deskriptif</p></li>
+<li><p>Pengukuran jarak antar pelanggan</p></li>
+<li><p>Clustering / segmentasi pelanggan</p></li>
+<li><p>Visualisasi berbasis jarak (Distance Map, MDS)</p></li>
+</ul>
+</section>
+<section id="visualisasi-data-pelanggan">
+<h2>Visualisasi Data Pelanggan<a class="headerlink" href="#visualisasi-data-pelanggan" title="Link to this heading">#</a></h2>
+<section id="distribusi-penghasilan">
+<h3>1. Distribusi Penghasilan<a class="headerlink" href="#distribusi-penghasilan" title="Link to this heading">#</a></h3>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/penghasilan.png"><img alt="_images/penghasilan.png" src="_images/penghasilan.png" style="width: 80%;" /></a>
+</figure>
+</section>
+<section id="distribusi-jenis-kelamin">
+<h3>2. Distribusi Jenis Kelamin<a class="headerlink" href="#distribusi-jenis-kelamin" title="Link to this heading">#</a></h3>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/kelamin.png"><img alt="_images/kelamin.png" src="_images/kelamin.png" style="width: 80%;" /></a>
+</figure>
+<section id="distribusi-kepuasan-pelanggan">
+<h4>3. Distribusi Kepuasan Pelanggan<a class="headerlink" href="#distribusi-kepuasan-pelanggan" title="Link to this heading">#</a></h4>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/kepuasan.png"><img alt="_images/kepuasan.png" src="_images/kepuasan.png" style="width: 80%;" /></a>
+</figure>
+</section>
+</section>
+</section>
+<section id="mengukur-jarak-dataset-pelanggan">
+<h2>Mengukur Jarak Dataset Pelanggan<a class="headerlink" href="#mengukur-jarak-dataset-pelanggan" title="Link to this heading">#</a></h2>
+<section id="rumus-euclidean-distance">
+<h3>Rumus Euclidean Distance<a class="headerlink" href="#rumus-euclidean-distance" title="Link to this heading">#</a></h3>
+<p>Untuk dua pelanggan A dan B:</p>
+<p>[
+d(A,B) = \sqrt{(x_A - x_B)^2}
+]</p>
+<p>Karena hanya menggunakan satu variabel (Umur), maka:</p>
+<p>[
+d = |Umur_A - Umur_B|
+]</p>
+</section>
+<section id="euclidean-distance-variabel-usia">
+<h3>Euclidean Distance (Variabel: Usia)<a class="headerlink" href="#euclidean-distance-variabel-usia" title="Link to this heading">#</a></h3>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/eucledean_umur.png"><img alt="_images/eucledean_umur.png" src="_images/eucledean_umur.png" style="width: 80%;" /></a>
+</figure>
+</section>
+</section>
+<section id="id1">
+<h2>Interpretasi<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Nilai jarak kecil → perbedaan usia antar pelanggan kecil (usia hampir sama).</p></li>
+<li><p>Nilai jarak besar → perbedaan usia antar pelanggan cukup jauh.</p></li>
+<li><p>Nilai 0 pada diagonal → menunjukkan jarak pelanggan terhadap dirinya sendiri.</p></li>
+<li><p>Semakin besar nilai jarak → semakin besar selisih usia antar pelanggan.</p></li>
+</ul>
+</section>
+<section id="karakteristik-euclidean-distance-variabel-umur">
+<h2>Karakteristik Euclidean Distance (Variabel Umur)<a class="headerlink" href="#karakteristik-euclidean-distance-variabel-umur" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Cocok untuk data numerik kontinu seperti usia.</p></li>
+<li><p>Dalam satu variabel, Euclidean Distance sama dengan nilai absolut selisih usia.</p></li>
+<li><p>Sensitif terhadap perbedaan besar (misalnya usia 20 dan 50 akan menghasilkan jarak tinggi).</p></li>
+<li><p>Mengukur perbedaan secara langsung berdasarkan selisih numerik.</p></li>
+</ul>
+</section>
+<section id="rumus-manhattan-distance">
+<h2>Rumus Manhattan Distance<a class="headerlink" href="#rumus-manhattan-distance" title="Link to this heading">#</a></h2>
+<p>Manhattan Distance mengukur jarak sebagai jumlah selisih absolut antar variabel.</p>
+<p>[
+d(A,B) = |x_1 - y_1| + |x_2 - y_2| + \dots + |x_n - y_n|
+]</p>
+<p>Karena hanya menggunakan satu variabel (Penghasilan_Juta), maka:</p>
+<p>[
+d = |Penghasilan_A - Penghasilan_B|
+]</p>
+</section>
+<section id="manhattan-distance-variabel-penghasilan-juta">
+<h2>Manhattan Distance (Variabel: Penghasilan_Juta)<a class="headerlink" href="#manhattan-distance-variabel-penghasilan-juta" title="Link to this heading">#</a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/manhattan_penghasilan.png"><img alt="_images/manhattan_penghasilan.png" src="_images/manhattan_penghasilan.png" style="width: 80%;" /></a>
+</figure>
+</section>
+<section id="id2">
+<h2>Interpretasi<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Nilai jarak kecil → pelanggan memiliki tingkat penghasilan yang hampir sama.</p></li>
+<li><p>Nilai jarak besar → terdapat perbedaan ekonomi yang signifikan antar pelanggan.</p></li>
+<li><p>Nilai 0 pada diagonal → menunjukkan jarak pelanggan terhadap dirinya sendiri.</p></li>
+<li><p>Semakin terang warna pada Distance Map → semakin besar perbedaan penghasilan antar pelanggan.</p></li>
+</ul>
+</section>
+<section id="karakteristik-manhattan-distance">
+<h2>Karakteristik Manhattan Distance<a class="headerlink" href="#karakteristik-manhattan-distance" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Cocok untuk data numerik seperti penghasilan.</p></li>
+<li><p>Mengukur jarak sebagai selisih absolut.</p></li>
+<li><p>Lebih stabil terhadap outlier dibandingkan Euclidean.</p></li>
+<li><p>Mudah diinterpretasikan karena langsung merepresentasikan selisih nilai.</p></li>
+</ul>
+</section>
+<section id="rumus-hamming-distance">
+<h2>Rumus Hamming Distance<a class="headerlink" href="#rumus-hamming-distance" title="Link to this heading">#</a></h2>
+<p>Hamming Distance mengukur perbedaan antar atribut kategorikal atau biner.</p>
+<p>[
+d =
+\begin{cases}
+0, &amp; \text{jika nilai sama} \
+1, &amp; \text{jika nilai berbeda}
+\end{cases}
+]</p>
+<p>Karena menggunakan variabel <code class="docutils literal notranslate"><span class="pre">Status_Member</span></code>, maka:</p>
+<ul class="simple">
+<li><p>d = 0 → kedua pelanggan memiliki status keanggotaan yang sama</p></li>
+<li><p>d = 1 → status keanggotaan berbeda</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/hamming_status.png"><img alt="_images/hamming_status.png" src="_images/hamming_status.png" style="width: 80%;" /></a>
+</figure>
+</section>
+<section id="id3">
+<h2>Interpretasi<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Nilai 0 menunjukkan pelanggan memiliki status keanggotaan yang sama.</p></li>
+<li><p>Nilai 1 menunjukkan perbedaan status member.</p></li>
+<li><p>Hamming Distance tidak mempertimbangkan besar kecil nilai, hanya kesamaan atau perbedaan.</p></li>
+</ul>
+</section>
+<section id="karakteristik-hamming-distance">
+<h2>Karakteristik Hamming Distance<a class="headerlink" href="#karakteristik-hamming-distance" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Cocok untuk data biner atau kategorikal.</p></li>
+<li><p>Tidak cocok untuk data numerik kontinu.</p></li>
+<li><p>Menghitung jumlah atribut yang berbeda.</p></li>
+<li><p>Tidak mempertimbangkan magnitude perbedaan.</p></li>
+</ul>
+</section>
+<section id="perbandingan-metode-distance">
+<h2>Perbandingan Metode Distance<a class="headerlink" href="#perbandingan-metode-distance" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aspek</p></th>
+<th class="head"><p>Euclidean Distance</p></th>
+<th class="head"><p>Manhattan Distance</p></th>
+<th class="head"><p>Hamming Distance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variabel yang Digunakan</p></td>
+<td><p>Umur</p></td>
+<td><p>Penghasilan_Juta</p></td>
+<td><p>Status_Member</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jenis Data</p></td>
+<td><p>Numerik kontinu</p></td>
+<td><p>Numerik kontinu</p></td>
+<td><p>Biner / Kategorikal</p></td>
+</tr>
+<tr class="row-even"><td><p>Konsep Dasar</p></td>
+<td><p>Mengukur jarak geometris antar nilai</p></td>
+<td><p>Mengukur total selisih absolut</p></td>
+<td><p>Mengukur kesamaan atau perbedaan nilai</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interpretasi Nilai Kecil</p></td>
+<td><p>Usia hampir sama</p></td>
+<td><p>Penghasilan hampir sama</p></td>
+<td><p>Status member sama</p></td>
+</tr>
+<tr class="row-even"><td><p>Interpretasi Nilai Besar</p></td>
+<td><p>Perbedaan usia jauh</p></td>
+<td><p>Perbedaan penghasilan besar</p></td>
+<td><p>Status berbeda</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sensitivitas terhadap Outlier</p></td>
+<td><p>Tinggi</p></td>
+<td><p>Lebih stabil dari Euclidean</p></td>
+<td><p>Tidak terpengaruh besar nilai</p></td>
+</tr>
+<tr class="row-even"><td><p>Cocok Untuk</p></td>
+<td><p>Data numerik berskala</p></td>
+<td><p>Data numerik multidimensi</p></td>
+<td><p>Data biner/kategorikal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kelebihan</p></td>
+<td><p>Representatif untuk jarak numerik</p></td>
+<td><p>Lebih robust terhadap nilai ekstrem</p></td>
+<td><p>Sederhana dan mudah dipahami</p></td>
+</tr>
+<tr class="row-even"><td><p>Keterbatasan</p></td>
+<td><p>Sensitif terhadap skala data</p></td>
+<td><p>Tidak mempertimbangkan arah perubahan</p></td>
+<td><p>Tidak cocok untuk numerik kontinu</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Euclidean Distance</strong> cocok digunakan untuk variabel numerik kontinu seperti <em>Umur</em>, karena mampu mengukur perbedaan nilai secara geometris berdasarkan selisih numerik.</p></li>
+<li><p><strong>Manhattan Distance</strong> sesuai untuk variabel numerik seperti <em>Penghasilan_Juta</em>, karena mengukur total selisih absolut dan relatif lebih stabil terhadap perbedaan nilai ekstrem.</p></li>
+<li><p><strong>Hamming Distance</strong> tepat digunakan untuk variabel biner seperti <em>Status_Member</em>, karena hanya mengukur kesamaan atau perbedaan kategori tanpa mempertimbangkan besar kecil nilai.</p></li>
+<li><p>Pada dataset campuran (numerik dan kategorikal), pemilihan metode jarak harus disesuaikan dengan tipe variabel yang dianalisis agar hasil pengukuran representatif.</p>
+<ul class="simple">
+<li><p>Metode yang ideal untuk data campuran adalah <strong>Gower Distance</strong>.</p></li>
+<li><p>Alternatifnya, dilakukan <strong>normalisasi dan encoding</strong> sebelum menggunakan metode berbasis jarak seperti Euclidean atau Manhattan.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pertemuan3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Distance Measurement</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-dataset">Ringkasan Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-data">Struktur Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif-numerik">Statistik Deskriptif (Numerik)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-variabel-ordinal">Karakteristik Variabel Ordinal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kualitas-data">Kualitas Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-awal">Kesimpulan Awal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-pelanggan">Visualisasi Data Pelanggan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-penghasilan">1. Distribusi Penghasilan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-jenis-kelamin">2. Distribusi Jenis Kelamin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-kepuasan-pelanggan">3. Distribusi Kepuasan Pelanggan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-jarak-dataset-pelanggan">Mengukur Jarak Dataset Pelanggan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-euclidean-distance">Rumus Euclidean Distance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance-variabel-usia">Euclidean Distance (Variabel: Usia)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-euclidean-distance-variabel-umur">Karakteristik Euclidean Distance (Variabel Umur)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-manhattan-distance">Rumus Manhattan Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manhattan-distance-variabel-penghasilan-juta">Manhattan Distance (Variabel: Penghasilan_Juta)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-manhattan-distance">Karakteristik Manhattan Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-hamming-distance">Rumus Hamming Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-hamming-distance">Karakteristik Hamming Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-metode-distance">Perbandingan Metode Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

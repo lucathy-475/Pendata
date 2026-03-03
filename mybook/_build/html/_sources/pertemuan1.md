@@ -1,5 +1,3 @@
-# Pertemuan 1
-
 # Business Understanding
 
 Memahami bisnis merupakan tahap awal dalam proses sains data yang berfokus pada pengenalan masalah, kebutuhan, serta target yang ingin dicapai organisasi. Tahap ini sangat krusial karena memastikan bahwa analisis data yang dilakukan sesuai dengan kondisi nyata di lapangan. Tanpa pemahaman bisnis yang tepat, hasil analisis berisiko tidak memberikan nilai bagi proses pengambilan keputusan.
