@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Analisis Statistik Deskriptif &#8212; My sample book</title>
+    <title>KNN &#8212; My sample book</title>
   
   
   
@@ -57,11 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'analisis-des';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan4';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Visualisasi Distribusi Data" href="visualisasi-data.html" />
-    <link rel="prev" title="Data Iris" href="data-iris.html" />
+    <link rel="prev" title="Distance in Customer Data" href="cus_distance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,10 +190,10 @@
 
 
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="data-iris.html">Data Iris</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Analisis Statistik Deskriptif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analisis-des.html">Analisis Statistik Deskriptif</a></li>
 
 
 
@@ -217,7 +216,7 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="pertemuan4.html">KNN</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">KNN</a></li>
 </ul>
 
     </div>
@@ -272,7 +271,7 @@
       
       
       
-      <li><a href="_sources/analisis-des.ipynb" target="_blank"
+      <li><a href="_sources/pertemuan4.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -356,7 +355,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Analisis Statistik Deskriptif</h1>
+    <h1>KNN</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -366,13 +365,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analisis Statistik Deskriptif</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-orange">Visualisasi Orange</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source Code</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keterangan-hasil">Keterangan Hasil</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-knn">Konsep KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sederhana">Contoh Sederhana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-dan-kekurangan">Kelebihan dan Kekurangan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-knn">Kelebihan KNN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kekurangan-knn">Kekurangan KNN</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
             </nav>
         </div>
     </div>
@@ -383,86 +384,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="analisis-statistik-deskriptif">
-<h1>Analisis Statistik Deskriptif<a class="headerlink" href="#analisis-statistik-deskriptif" title="Link to this heading">#</a></h1>
-<p>Metode untuk meringkas, mengatur, dan menyajikan data mentah agar menjadi informasi yang mudah dipahami, biasanya melalui nilai rata-rata (mean), median, modus, standar deviasi, maksimum, dan minimum.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="visualisasi-orange">
-<h1>Visualisasi Orange<a class="headerlink" href="#visualisasi-orange" title="Link to this heading">#</a></h1>
-<figure class="align-center">
-<a class="reference internal image-reference" href="_images/petal-length.png"><img alt="_images/petal-length.png" src="_images/petal-length.png" style="width: 80%;" /></a>
-</figure>
-<figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="_images/hasil.png"><img alt="_images/hasil.png" src="_images/hasil.png" style="width: 80%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Fig. 1 Analisis Statistik Deskriptif Fitur <em>petal-length</em></span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="source-code">
-<h1>Source Code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/IRIS.csv&quot;</span><span class="p">)</span>
-<span class="n">petal</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;petal_length&quot;</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Statistik Deskriptif Petal Length ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah data        :&quot;</span><span class="p">,</span> <span class="n">petal</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rata-rata (Mean)   :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">petal</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nilai minimum      :&quot;</span><span class="p">,</span> <span class="n">petal</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Q1 (25%)           :&quot;</span><span class="p">,</span> <span class="n">petal</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median (Q2)        :&quot;</span><span class="p">,</span> <span class="n">petal</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.50</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Q3 (75%)           :&quot;</span><span class="p">,</span> <span class="n">petal</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nilai maksimum     :&quot;</span><span class="p">,</span> <span class="n">petal</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-
-<span class="n">mode_value</span> <span class="o">=</span> <span class="n">petal</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">mode_count</span> <span class="o">=</span> <span class="n">petal</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="n">mode_value</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Modus              :&quot;</span><span class="p">,</span> <span class="n">mode_value</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Frekuensi modus    :&quot;</span><span class="p">,</span> <span class="n">mode_count</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standar deviasi    :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">petal</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variansi           :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">petal</span><span class="o">.</span><span class="n">var</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Statistik Deskriptif Petal Length ===
-
-Jumlah data        : 150
-Rata-rata (Mean)   : 3.759
-Nilai minimum      : 1.0
-Q1 (25%)           : 1.6
-Median (Q2)        : 4.35
-Q3 (75%)           : 5.1
-Nilai maksimum     : 6.9
-Modus              : 1.5
-Frekuensi modus    : 14
-Standar deviasi    : 1.764
-Variansi           : 3.113
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="keterangan-hasil">
-<h1>Keterangan Hasil<a class="headerlink" href="#keterangan-hasil" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="knn">
+<h1>KNN<a class="headerlink" href="#knn" title="Link to this heading">#</a></h1>
+<p>K-Nearest Neighbor (KNN) adalah salah satu algoritma dalam penambangan data (data mining) dan machine learning yang digunakan untuk melakukan klasifikasi maupun prediksi (regresi) berdasarkan kedekatan atau kemiripan data.</p>
+<p>Secara sederhana, KNN bekerja dengan cara membandingkan suatu data baru dengan sejumlah data yang paling dekat dengannya (tetangga terdekat) di dalam dataset. Kedekatan tersebut biasanya dihitung menggunakan ukuran jarak tertentu, seperti Euclidean Distance.</p>
+<section id="konsep-knn">
+<h2>Konsep KNN<a class="headerlink" href="#konsep-knn" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Jumlah data menunjukkan banyaknya sampel yang dianalisis.</p></li>
-<li><p>Rata-rata (mean) merupakan nilai pemusatan data.</p></li>
-<li><p>Nilai minimum dan maksimum menunjukkan rentang data.</p></li>
-<li><p>Q1, Median (Q2), dan Q3 membagi data menjadi empat bagian sama besar.</p></li>
-<li><p>Modus adalah nilai yang paling sering muncul dalam data.</p></li>
-<li><p>Standar deviasi menunjukkan tingkat penyebaran data dari rata-rata.</p></li>
-<li><p>Variansi merupakan kuadrat dari standar deviasi.</p></li>
+<li><p>Menentukan nilai K
+Nilai K adalah jumlah tetangga terdekat yang akan digunakan untuk menentukan hasil prediksi.</p></li>
+<li><p>Menghitung jarak
+Sistem menghitung jarak antara data baru dengan seluruh data yang sudah ada di dataset.</p></li>
+<li><p>Menentukan tetangga terdekat
+Dari semua data, dipilih K data dengan jarak paling dekat.</p></li>
+<li><p>Menentukan hasil</p>
+<ul>
+<li><p>Pada klasifikasi: kelas yang paling banyak muncul dari tetangga tersebut menjadi hasil prediksi.</p></li>
+<li><p>Pada regresi: nilai prediksi biasanya dihitung dari rata-rata nilai tetangga terdekat.</p></li>
+</ul>
+</li>
 </ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="kesimpulan">
-<h1>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h1>
-<p>Berdasarkan analisis statistik deskriptif, atribut <strong>petal-length</strong> pada dataset Iris memiliki sebaran data yang relatif stabil. Nilai standar deviasi yang tidak terlalu besar menunjukkan bahwa data tidak menyebar jauh dari nilai rata-ratanya.</p>
+<section id="contoh-sederhana">
+<h2>Contoh Sederhana<a class="headerlink" href="#contoh-sederhana" title="Link to this heading">#</a></h2>
+<p>Misalnya ingin menentukan apakah suatu email termasuk spam atau tidak.
+Algoritma KNN akan melihat beberapa email yang paling mirip dengan email baru tersebut. Jika sebagian besar email terdekat adalah spam, maka email baru juga diprediksi sebagai spam.</p>
+</section>
+<section id="kelebihan-dan-kekurangan">
+<h2>Kelebihan dan Kekurangan<a class="headerlink" href="#kelebihan-dan-kekurangan" title="Link to this heading">#</a></h2>
+<section id="kelebihan-knn">
+<h3>Kelebihan KNN<a class="headerlink" href="#kelebihan-knn" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Mudah dipahami dan diimplementasikan</p></li>
+<li><p>Tidak memerlukan proses pelatihan model yang kompleks</p></li>
+<li><p>Dapat digunakan untuk klasifikasi maupun regresi</p></li>
+</ul>
+</section>
+<section id="kekurangan-knn">
+<h3>Kekurangan KNN<a class="headerlink" href="#kekurangan-knn" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Proses prediksi bisa lambat jika data sangat besar</p></li>
+<li><p>Sensitif terhadap pemilihan nilai K</p></li>
+<li><p>Dipengaruhi oleh skala dan distribusi data</p></li>
+</ul>
+</section>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>KNN adalah metode dalam penambangan data yang menentukan hasil klasifikasi atau prediksi dengan melihat kemiripan atau kedekatan suatu data dengan data lain yang sudah diketahui sebelumnya.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -496,22 +466,13 @@ Variansi           : 3.113
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="data-iris.html"
+       href="cus_distance.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Iris</p>
+        <p class="prev-next-title">Distance in Customer Data</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="visualisasi-data.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualisasi Distribusi Data</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -529,13 +490,15 @@ Variansi           : 3.113
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analisis Statistik Deskriptif</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-orange">Visualisasi Orange</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source Code</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keterangan-hasil">Keterangan Hasil</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-knn">Konsep KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sederhana">Contoh Sederhana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-dan-kekurangan">Kelebihan dan Kekurangan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-knn">Kelebihan KNN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kekurangan-knn">Kekurangan KNN</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
   </nav></div>
 
 </div></div>

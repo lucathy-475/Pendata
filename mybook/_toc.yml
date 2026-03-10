@@ -10,4 +10,8 @@ chapters:
     - file: analisis-des
     - file: visualisasi-data
   - file: pertemuan3
-  - file: tugas2
+    sections:  
+    - file: data_pel
+    - file: iris_distance
+    - file: cus_distance
+  - file: pertemuan4
