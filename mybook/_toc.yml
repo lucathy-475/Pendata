@@ -14,4 +14,10 @@ chapters:
     - file: data_pel
     - file: iris_distance
     - file: cus_distance
+    - file: knn_distance
   - file: pertemuan4
+  - file: m2normal
+    sections:
+    - file: c_normal_pel
+    - file: wknn_hitung_miss_value
+    - file: hitung_wknn_py
