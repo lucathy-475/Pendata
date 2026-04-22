@@ -21,3 +21,4 @@ chapters:
     - file: c_normal_pel
     - file: wknn_hitung_miss_value
     - file: hitung_wknn_py
+  - file: uts
