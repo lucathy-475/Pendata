@@ -16,6 +16,9 @@ Pada workflow yang digunakan, algoritma KNN diterapkan setelah data selesai dipr
 5. Mengevaluasi model menggunakan **Test and Score**
 6. Melihat hasil klasifikasi menggunakan **Confusion Matrix**
 
+![Workflow](images/workflow.png)
+
+
 Model KNN kemudian diuji menggunakan metode **Cross Validation**.
 
 ---
@@ -39,8 +42,6 @@ Tujuan:
 - Membaca dataset dari file CSV
 - Menyiapkan data awal untuk analisis
 
-![CSV File](images/1uts.png)
-
 ---
 
 ### 2.2 Seleksi Atribut
@@ -56,8 +57,6 @@ Digunakan untuk:
 - Menghapus atribut yang tidak diperlukan
 
 Langkah ini penting agar model hanya menggunakan data yang relevan.
-
-![Select Columns](images/2uts.png)
 
 ---
 
@@ -80,8 +79,6 @@ Tujuan:
 - Menghindari error saat proses klasifikasi
 - Meningkatkan kualitas data
 
-![Impute](images/3uts.png)
-
 ---
 
 ### 2.4 Transformasi Data
@@ -94,7 +91,6 @@ Digunakan untuk mengubah data kategorikal menjadi numerik.
 
 Hal ini diperlukan karena algoritma KNN hanya dapat memproses data dalam bentuk numerik.
 
-![Continuize](images/4uts.png)
 
 ---
 
@@ -119,14 +115,21 @@ Tujuan:
 
 ---
 
-### 2.6 Visualisasi Data (Tambahan)
+### 2.6 Visualisasi Data
 
 Selain preprocessing, dilakukan juga visualisasi data menggunakan:
 
 - **Distributions**
+![Distributions](images/distribution.png)
+
 - **Box Plot**
+![Box Plot](images/boxplot.png)
+
 - **PCA**
+![PCA](images/pca.png)
+
 - **Scatter Plot**
+![Scatter Plot](images/scatter-plot.png)
 
 Visualisasi ini digunakan untuk memahami pola data dan membantu dalam proses analisis.
 
@@ -241,24 +244,13 @@ Hasil evaluasi model KNN diperoleh dari widget **Test and Score**.
 | Recall | **1.000** |
 | F1-Score | **1.000** |
 
-
-![Test and Score](images/7uts.png)
-
-
 ---
 
 ## Hasil Confusion Matrix
 
 Confusion Matrix digunakan untuk melihat detail hasil klasifikasi.
 
-(Isi nilai berikut sesuai hasil pada Confusion Matrix)
-
-- True Positive (TP) = ___  
-- True Negative (TN) = ___  
-- False Positive (FP) = ___  
-- False Negative (FN) = ___  
-
-Confusion Matrix membantu dalam memahami kesalahan prediksi yang dilakukan oleh model.
+![Confusion Matrix](images/con-matriks.png)
 
 ---
 

@@ -378,7 +378,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-missing-value">2.3 Penanganan Missing Value</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-data">2.4 Transformasi Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">2.5 Normalisasi Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-tambahan">2.6 Visualisasi Data (Tambahan)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">2.6 Visualisasi Data</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-3">Soal 3</a><ul class="nav section-nav flex-column">
@@ -422,6 +422,7 @@ document.write(`
 <li><p>Mengevaluasi model menggunakan <strong>Test and Score</strong></p></li>
 <li><p>Melihat hasil klasifikasi menggunakan <strong>Confusion Matrix</strong></p></li>
 </ol>
+<p><img alt="Workflow" src="_images/workflow.png" /></p>
 <p>Model KNN kemudian diuji menggunakan metode <strong>Cross Validation</strong>.</p>
 </section>
 </section>
@@ -443,7 +444,6 @@ document.write(`
 <li><p>Membaca dataset dari file CSV</p></li>
 <li><p>Menyiapkan data awal untuk analisis</p></li>
 </ul>
-<p><img alt="CSV File" src="_images/1uts.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="seleksi-atribut">
@@ -457,7 +457,6 @@ document.write(`
 <li><p>Menghapus atribut yang tidak diperlukan</p></li>
 </ul>
 <p>Langkah ini penting agar model hanya menggunakan data yang relevan.</p>
-<p><img alt="Select Columns" src="_images/2uts.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="penanganan-missing-value">
@@ -476,7 +475,6 @@ document.write(`
 <li><p>Menghindari error saat proses klasifikasi</p></li>
 <li><p>Meningkatkan kualitas data</p></li>
 </ul>
-<p><img alt="Impute" src="_images/3uts.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="transformasi-data">
@@ -485,7 +483,6 @@ document.write(`
 <p><strong>Continuize</strong></p>
 <p>Digunakan untuk mengubah data kategorikal menjadi numerik.</p>
 <p>Hal ini diperlukan karena algoritma KNN hanya dapat memproses data dalam bentuk numerik.</p>
-<p><img alt="Continuize" src="_images/4uts.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="normalisasi-data">
@@ -505,14 +502,18 @@ document.write(`
 </ul>
 </section>
 <hr class="docutils" />
-<section id="visualisasi-data-tambahan">
-<h3>2.6 Visualisasi Data (Tambahan)<a class="headerlink" href="#visualisasi-data-tambahan" title="Permalink to this heading">#</a></h3>
+<section id="visualisasi-data">
+<h3>2.6 Visualisasi Data<a class="headerlink" href="#visualisasi-data" title="Permalink to this heading">#</a></h3>
 <p>Selain preprocessing, dilakukan juga visualisasi data menggunakan:</p>
 <ul class="simple">
-<li><p><strong>Distributions</strong></p></li>
-<li><p><strong>Box Plot</strong></p></li>
-<li><p><strong>PCA</strong></p></li>
-<li><p><strong>Scatter Plot</strong></p></li>
+<li><p><strong>Distributions</strong>
+<img alt="Distributions" src="_images/distribution.png" /></p></li>
+<li><p><strong>Box Plot</strong>
+<img alt="Box Plot" src="_images/boxplot.png" /></p></li>
+<li><p><strong>PCA</strong>
+<img alt="PCA" src="_images/pca.png" /></p></li>
+<li><p><strong>Scatter Plot</strong>
+<img alt="Scatter Plot" src="_images/scatter-plot.png" /></p></li>
 </ul>
 <p>Visualisasi ini digunakan untuk memahami pola data dan membantu dalam proses analisis.</p>
 </section>
@@ -609,20 +610,12 @@ FN = False Negative</p>
 </tbody>
 </table>
 </div>
-<p><img alt="Test and Score" src="_images/7uts.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="hasil-confusion-matrix">
 <h2>Hasil Confusion Matrix<a class="headerlink" href="#hasil-confusion-matrix" title="Permalink to this heading">#</a></h2>
 <p>Confusion Matrix digunakan untuk melihat detail hasil klasifikasi.</p>
-<p>(Isi nilai berikut sesuai hasil pada Confusion Matrix)</p>
-<ul class="simple">
-<li><p>True Positive (TP) = ___</p></li>
-<li><p>True Negative (TN) = ___</p></li>
-<li><p>False Positive (FP) = ___</p></li>
-<li><p>False Negative (FN) = ___</p></li>
-</ul>
-<p>Confusion Matrix membantu dalam memahami kesalahan prediksi yang dilakukan oleh model.</p>
+<p><img alt="Confusion Matrix" src="_images/con-matriks.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="kesimpulan">
@@ -716,7 +709,7 @@ FN = False Negative</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-missing-value">2.3 Penanganan Missing Value</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-data">2.4 Transformasi Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">2.5 Normalisasi Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-tambahan">2.6 Visualisasi Data (Tambahan)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">2.6 Visualisasi Data</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-3">Soal 3</a><ul class="nav section-nav flex-column">
