@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>📘 Introduction to Data Mining &#8212; My sample book</title>
+    <title>Tugas Naive Bayes &#8212; My sample book</title>
   
   
   
@@ -62,10 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'naive_bayes';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Business Understanding" href="pertemuan1.html" />
+    <link rel="prev" title="UTS" href="uts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -128,8 +128,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -148,7 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -168,13 +166,13 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     📘 Introduction to Data Mining
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Business Understanding</a></li>
 
 
@@ -221,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="uts.html">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="naive_bayes.html">Tugas Naive Bayes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Naive Bayes</a></li>
 </ul>
 
     </div>
@@ -276,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/naive_bayes.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -360,7 +358,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>📘 Introduction to Data Mining</h1>
+    <h1>Tugas Naive Bayes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -370,8 +368,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biodata">👤 Biodata</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengantar-mata-kuliah-data-mining">🚀 Pengantar Mata Kuliah Data Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-tugas">File Tugas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-naive-bayes">Pengertian Naive Bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-naive-bayes">Rumus Naive Bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-pada-dataset">Cara Kerja pada Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">Deskripsi Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-knime">Workflow KNIME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-node">Penjelasan Node</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel-reader">Excel Reader</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalizer">Normalizer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">Table Partitioner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-script">Python Script</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -383,33 +394,198 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-data-mining">
-<h1>📘 Introduction to Data Mining<a class="headerlink" href="#introduction-to-data-mining" title="Permalink to this heading">#</a></h1>
-<section id="biodata">
-<h2>👤 Biodata<a class="headerlink" href="#biodata" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-naive-bayes">
+<h1>Tugas Naive Bayes<a class="headerlink" href="#tugas-naive-bayes" title="Permalink to this heading">#</a></h1>
+<section id="file-tugas">
+<h2>File Tugas<a class="headerlink" href="#file-tugas" title="Permalink to this heading">#</a></h2>
+<a href="../data/data_kelulusan.xlsx" download>
+    <button>📥 Download Dataset</button>
+<a href="../data/python_naive_bayes.knwf" download>
+    <button>📥 Download File Knime</button>
+</section>
+<section id="pengertian-naive-bayes">
+<h2>Pengertian Naive Bayes<a class="headerlink" href="#pengertian-naive-bayes" title="Permalink to this heading">#</a></h2>
+<p>Naive Bayes adalah algoritma klasifikasi berbasis probabilitas yang digunakan untuk menentukan kelas suatu data berdasarkan nilai fitur yang dimiliki. Algoritma ini menggunakan Teorema Bayes dengan asumsi bahwa setiap fitur bersifat independen satu sama lain.</p>
+<p>Pada penelitian ini, Naive Bayes digunakan untuk <strong>memprediksi status kelulusan mahasiswa</strong> berdasarkan beberapa parameter akademik, yaitu:</p>
 <ul class="simple">
-<li><p><strong>Nama</strong> : Rendi Yulistio Firmansyah</p></li>
-<li><p><strong>NIM</strong> : 240411100149</p></li>
-<li><p><strong>Fakultas</strong> : Teknik</p></li>
-<li><p><strong>Program Studi</strong> : Teknik Informatika</p></li>
+<li><p>Tugas</p></li>
+<li><p>UTS</p></li>
+<li><p>UAS</p></li>
+<li><p>Kehadiran</p></li>
+</ul>
+<p>Target yang diprediksi adalah:</p>
+<ul class="simple">
+<li><p><strong>Status = Lulus</strong></p></li>
+<li><p><strong>Status = Tidak Lulus</strong></p></li>
+</ul>
+<hr class="docutils" />
+<section id="rumus-naive-bayes">
+<h3>Rumus Naive Bayes<a class="headerlink" href="#rumus-naive-bayes" title="Permalink to this heading">#</a></h3>
+<p>[
+P(\text{Status} | X) \propto P(\text{Status}) \cdot P(Tugas|\text{Status}) \cdot P(UTS|\text{Status}) \cdot P(UAS|\text{Status}) \cdot P(Kehadiran|\text{Status})
+]</p>
+<p>Keterangan:</p>
+<ul class="simple">
+<li><p>(X) = data mahasiswa (Tugas, UTS, UAS, Kehadiran)</p></li>
+<li><p>(P(\text{Status})) = probabilitas kelas (Lulus / Tidak Lulus)</p></li>
+<li><p>(P(\text{fitur}|\text{Status})) = probabilitas fitur terhadap kelas</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="pengantar-mata-kuliah-data-mining">
-<h2>🚀 Pengantar Mata Kuliah Data Mining<a class="headerlink" href="#pengantar-mata-kuliah-data-mining" title="Permalink to this heading">#</a></h2>
-<p>Di era digital saat ini, data menjadi aset yang sangat berharga. Setiap aktivitas manusia—baik di bidang bisnis, pendidikan, kesehatan, maupun teknologi—menghasilkan data dalam jumlah besar. Namun, data mentah saja tidak memiliki makna tanpa proses pengolahan yang tepat. Di sinilah <strong>Data Mining (Penambangan Data)</strong> berperan penting.</p>
-<p>Mata kuliah <strong>Data Mining</strong> mempelajari teknik dan metode untuk menggali informasi tersembunyi dari sekumpulan data yang besar dan kompleks. Melalui pendekatan analisis statistik, <em>machine learning</em>, dan algoritma komputasi, mahasiswa diajarkan bagaimana:</p>
+<section id="cara-kerja-pada-dataset">
+<h3>Cara Kerja pada Dataset<a class="headerlink" href="#cara-kerja-pada-dataset" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Menghitung jumlah data <strong>Lulus</strong> dan <strong>Tidak Lulus</strong></p></li>
+<li><p>Menghitung rata-rata (mean) dan standar deviasi tiap fitur:</p>
 <ul class="simple">
-<li><p>🔎 Mengidentifikasi pola dan tren dalam data</p></li>
-<li><p>📊 Mengelompokkan data berdasarkan karakteristik tertentu</p></li>
-<li><p>📈 Membuat prediksi berdasarkan data historis</p></li>
-<li><p>🔗 Menemukan hubungan antar variabel</p></li>
+<li><p>Tugas</p></li>
+<li><p>UTS</p></li>
+<li><p>UAS</p></li>
+<li><p>Kehadiran</p></li>
 </ul>
-<p>Pembelajaran tidak hanya berfokus pada teori, tetapi juga praktik langsung menggunakan tools dan bahasa pemrograman seperti Python. Dengan demikian, mahasiswa tidak hanya memahami konsep, tetapi juga mampu mengimplementasikan teknik data mining dalam studi kasus nyata.</p>
-<p>Tujuan utama dari mata kuliah ini adalah membekali mahasiswa dengan kemampuan untuk mengubah data menjadi <strong>informasi yang bernilai</strong>, sehingga dapat mendukung proses <strong>pengambilan keputusan yang lebih efektif dan berbasis data (<em>data-driven decision making</em>)</strong> di berbagai bidang industri dan penelitian.</p>
+</li>
+<li><p>Menghitung probabilitas tiap fitur menggunakan distribusi Gaussian</p></li>
+<li><p>Mengalikan semua probabilitas untuk masing-masing kelas</p></li>
+<li><p>Memilih kelas dengan probabilitas terbesar sebagai hasil prediksi</p></li>
+</ol>
 </section>
-<div class="toctree-wrapper compound">
+</section>
+<section id="deskripsi-dataset">
+<h2>Deskripsi Dataset<a class="headerlink" href="#deskripsi-dataset" title="Permalink to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nama Kolom</p></th>
+<th class="head"><p>Tipe Data</p></th>
+<th class="head"><p>Deskripsi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tugas</p></td>
+<td><p>Numerik</p></td>
+<td><p>Nilai rata-rata tugas mahasiswa</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTS</p></td>
+<td><p>Numerik</p></td>
+<td><p>Nilai Ujian Tengah Semester</p></td>
+</tr>
+<tr class="row-even"><td><p>UAS</p></td>
+<td><p>Numerik</p></td>
+<td><p>Nilai Ujian Akhir Semester</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kehadiran</p></td>
+<td><p>Numerik</p></td>
+<td><p>Persentase kehadiran mahasiswa (0–100)</p></td>
+</tr>
+<tr class="row-even"><td><p>Status</p></td>
+<td><p>Kategorikal</p></td>
+<td><p>Label kelulusan (Lulus / Tidak Lulus)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</section>
+<section id="workflow-knime">
+<h2>Workflow KNIME<a class="headerlink" href="#workflow-knime" title="Permalink to this heading">#</a></h2>
+<p><img alt="Workflow Knime" src="images/workflow_nb.png" /></p>
+</section>
+<section id="penjelasan-node">
+<h2>Penjelasan Node<a class="headerlink" href="#penjelasan-node" title="Permalink to this heading">#</a></h2>
+<section id="excel-reader">
+<h3>Excel Reader<a class="headerlink" href="#excel-reader" title="Permalink to this heading">#</a></h3>
+<p><img alt="Excel Reader" src="_images/ex_read.png" /></p>
+<p>Node ini berfungsi untuk membaca dataset.</p>
+</section>
+<section id="normalizer">
+<h3>Normalizer<a class="headerlink" href="#normalizer" title="Permalink to this heading">#</a></h3>
+<p><img alt="Normalizer" src="_images/normalizer.png" /></p>
+<p>Node ini berfungsi untuk ntuk menyamakan skala nilai pada data numerik agar berada dalam rentang tertentu (0 - 1).</p>
+<p>Dengan normalisasi:</p>
+<ul class="simple">
+<li><p>Menghindari dominasi nilai yang lebih besar</p></li>
+<li><p>Membuat perhitungan model lebih stabil</p></li>
+</ul>
+<p>Pada tugas ini, Normalizer digunakan untuk mengubah nilai <strong>Tugas, UTS, UAS, dan Kehadiran</strong> ke rentang yang sama sebelum proses klasifikasi.</p>
+</section>
+<section id="table-partitioner">
+<h3>Table Partitioner<a class="headerlink" href="#table-partitioner" title="Permalink to this heading">#</a></h3>
+<p><img alt="Table Partitioner" src="_images/tab_pert.png" /></p>
+<p>Node <strong>Table Partitioner</strong> berfungsi untuk membagi dataset menjadi dua bagian, yaitu data <strong>training</strong> dan data <strong>testing</strong>.</p>
+<p>Dengan pembagian ini:</p>
+<ul class="simple">
+<li><p>Data training digunakan untuk melatih model</p></li>
+<li><p>Data testing digunakan untuk menguji performa model</p></li>
+</ul>
+<p>Pada tugas ini, data dibagi dengan perbandingan:</p>
+<ul class="simple">
+<li><p>80% data training</p></li>
+<li><p>20% data testing</p></li>
+</ul>
+<p>Pembagian dilakukan secara acak agar data lebih representatif.</p>
+</section>
+<section id="python-script">
+<h3>Python Script<a class="headerlink" href="#python-script" title="Permalink to this heading">#</a></h3>
+<p>Script Learned:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import knime.scripting.io as knio
+from sklearn.naive_bayes import GaussianNB
+
+df = knio.input_tables[0].to_pandas()
+
+x = df[[&#39;Tugas&#39;,&#39;UTS&#39;,&#39;UAS&#39;,&#39;Kehadiran&#39;]]
+y = df[&#39;Status&#39;]
+
+model = GaussianNB()
+model.fit(x,y)
+
+knio.output_objects[0] = model
+
+Script Predictor:
+python
+import knime.scripting.io as knio
+
+model = knio.input_objects[0]
+
+test_df = knio.input_tables[0].to_pandas()
+
+X_test = test_df[[&#39;Tugas&#39;, &#39;UTS&#39;, &#39;UAS&#39;, &#39;Kehadiran&#39;]]
+
+predictions = model.predict(X_test)
+
+test_df[&#39;Prediksi_Lulus&#39;] = predictions
+
+knio.output_tables[0] = knio.Table.from_pandas(test_df)
+
+Node **Python Script** berfungsi untuk mengintegrasikan kode Python ke dalam workflow KNIME, sehingga memungkinkan penggunaan library machine learning seperti Scikit-learn.
+
+Pada tugas ini, Python Script digunakan untuk:
+- Melatih model klasifikasi **Naive Bayes (GaussianNB)**
+- Melakukan prediksi terhadap data
+- Mengolah data menggunakan library Python
+
+### Scorer
+
+![Scorer](images/score.png)
+
+Node **Scorer** berfungsi untuk mengevaluasi performa model klasifikasi dengan membandingkan hasil prediksi dengan data sebenarnya.
+
+Pada tugas ini, Scorer digunakan untuk menilai seberapa baik model Naive Bayes dalam memprediksi **Status (Lulus / Tidak Lulus)**.
+
+## Kesimpulan
+
+Berdasarkan implementasi algoritma Naive Bayes (GaussianNB) pada dataset kelulusan mahasiswa, dapat disimpulkan bahwa metode ini efektif digunakan untuk melakukan klasifikasi status kelulusan berdasarkan variabel akademik seperti Tugas, UTS, UAS, dan Kehadiran.
+
+Workflow yang dibangun di KNIME menunjukkan bahwa proses klasifikasi dilakukan melalui beberapa tahap penting, yaitu mulai dari pembacaan data, normalisasi, pembagian data training dan testing, pelatihan model menggunakan Python Script, hingga evaluasi menggunakan Scorer.
+
+Hasil dari proses ini menunjukkan bahwa Naive Bayes mampu memprediksi status kelulusan dengan cara menghitung probabilitas setiap kelas berdasarkan fitur yang ada, sehingga menghasilkan keputusan akhir berupa Lulus atau Tidak Lulus.
+
+Secara keseluruhan, metode Naive Bayes cukup sesuai untuk kasus klasifikasi sederhana seperti prediksi kelulusan, karena:
+
+- Mudah diimplementasikan
+- Cepat dalam proses komputasi
+- Cukup akurat untuk data numerik yang terstruktur
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -442,14 +618,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="pertemuan1.html"
-       title="next page">
+    <a class="left-prev"
+       href="uts.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Business Understanding</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UTS</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -467,8 +643,21 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biodata">👤 Biodata</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengantar-mata-kuliah-data-mining">🚀 Pengantar Mata Kuliah Data Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-tugas">File Tugas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-naive-bayes">Pengertian Naive Bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-naive-bayes">Rumus Naive Bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-pada-dataset">Cara Kerja pada Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">Deskripsi Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-knime">Workflow KNIME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-node">Penjelasan Node</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel-reader">Excel Reader</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalizer">Normalizer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">Table Partitioner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-script">Python Script</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
