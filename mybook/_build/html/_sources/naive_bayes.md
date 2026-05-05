@@ -26,15 +26,14 @@ Target yang diprediksi adalah:
 
 ### Rumus Naive Bayes
 
-\[
-P(\text{Status} | X) \propto P(\text{Status}) \cdot P(Tugas|\text{Status}) \cdot P(UTS|\text{Status}) \cdot P(UAS|\text{Status}) \cdot P(Kehadiran|\text{Status})
-\]
+$$
+P(\text{Status} \mid X) \propto P(\text{Status}) \cdot P(Tugas \mid \text{Status}) \cdot P(UTS \mid \text{Status}) \cdot P(UAS \mid \text{Status}) \cdot P(Kehadiran \mid \text{Status})
+$$
 
-Keterangan:
-- \(X\) = data mahasiswa (Tugas, UTS, UAS, Kehadiran)  
-- \(P(\text{Status})\) = probabilitas kelas (Lulus / Tidak Lulus)  
-- \(P(\text{fitur}|\text{Status})\) = probabilitas fitur terhadap kelas  
-
+**Keterangan:**
+- $$ \( X \) = data mahasiswa (Tugas, UTS, UAS, Kehadiran) $$  
+- $$ \( P(\text{Status}) \) = probabilitas kelas (Lulus / Tidak Lulus) $$
+- $$ \( P(\text{fitur} \mid \text{Status}) \) = probabilitas setiap fitur terhadap kelas $$
 ---
 
 ### Cara Kerja pada Dataset
@@ -61,7 +60,7 @@ Keterangan:
 
 ## Workflow KNIME
 
-![Workflow Knime](images/workflow_nb.png)
+![Workflow Knime](images/wofkflow_nb.png)
 
 ## Penjelasan Node
 
@@ -115,9 +114,10 @@ model = GaussianNB()
 model.fit(x,y)
 
 knio.output_objects[0] = model
+```
 
 Script Predictor:
-python
+```python
 import knime.scripting.io as knio
 
 model = knio.input_objects[0]
@@ -131,6 +131,7 @@ predictions = model.predict(X_test)
 test_df['Prediksi_Lulus'] = predictions
 
 knio.output_tables[0] = knio.Table.from_pandas(test_df)
+```
 
 Node **Python Script** berfungsi untuk mengintegrasikan kode Python ke dalam workflow KNIME, sehingga memungkinkan penggunaan library machine learning seperti Scikit-learn.
 

@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'naive_bayes';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -381,8 +383,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalizer">Normalizer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">Table Partitioner</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-script">Python Script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scorer">Scorer</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
             </nav>
         </div>
@@ -421,14 +425,21 @@ document.write(`
 <hr class="docutils" />
 <section id="rumus-naive-bayes">
 <h3>Rumus Naive Bayes<a class="headerlink" href="#rumus-naive-bayes" title="Permalink to this heading">#</a></h3>
-<p>[
-P(\text{Status} | X) \propto P(\text{Status}) \cdot P(Tugas|\text{Status}) \cdot P(UTS|\text{Status}) \cdot P(UAS|\text{Status}) \cdot P(Kehadiran|\text{Status})
-]</p>
-<p>Keterangan:</p>
-<ul class="simple">
-<li><p>(X) = data mahasiswa (Tugas, UTS, UAS, Kehadiran)</p></li>
-<li><p>(P(\text{Status})) = probabilitas kelas (Lulus / Tidak Lulus)</p></li>
-<li><p>(P(\text{fitur}|\text{Status})) = probabilitas fitur terhadap kelas</p></li>
+<div class="math notranslate nohighlight">
+\[
+P(\text{Status} \mid X) \propto P(\text{Status}) \cdot P(Tugas \mid \text{Status}) \cdot P(UTS \mid \text{Status}) \cdot P(UAS \mid \text{Status}) \cdot P(Kehadiran \mid \text{Status})
+\]</div>
+<p><strong>Keterangan:</strong></p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ \( X \) = data mahasiswa (Tugas, UTS, UAS, Kehadiran) \]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[ \( P(\text{Status}) \) = probabilitas kelas (Lulus / Tidak Lulus) \]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[ \( P(\text{fitur} \mid \text{Status}) \) = probabilitas setiap fitur terhadap kelas \]</div>
+</li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -486,7 +497,7 @@ P(\text{Status} | X) \propto P(\text{Status}) \cdot P(Tugas|\text{Status}) \cdot
 </section>
 <section id="workflow-knime">
 <h2>Workflow KNIME<a class="headerlink" href="#workflow-knime" title="Permalink to this heading">#</a></h2>
-<p><img alt="Workflow Knime" src="images/workflow_nb.png" /></p>
+<p><img alt="Workflow Knime" src="_images/wofkflow_nb.png" /></p>
 </section>
 <section id="penjelasan-node">
 <h2>Penjelasan Node<a class="headerlink" href="#penjelasan-node" title="Permalink to this heading">#</a></h2>
@@ -525,66 +536,62 @@ P(\text{Status} | X) \propto P(\text{Status}) \cdot P(Tugas|\text{Status}) \cdot
 <section id="python-script">
 <h3>Python Script<a class="headerlink" href="#python-script" title="Permalink to this heading">#</a></h3>
 <p>Script Learned:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import knime.scripting.io as knio
-from sklearn.naive_bayes import GaussianNB
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">knime.scripting.io</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">knio</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianNB</span>
 
-df = knio.input_tables[0].to_pandas()
+<span class="n">df</span> <span class="o">=</span> <span class="n">knio</span><span class="o">.</span><span class="n">input_tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
 
-x = df[[&#39;Tugas&#39;,&#39;UTS&#39;,&#39;UAS&#39;,&#39;Kehadiran&#39;]]
-y = df[&#39;Status&#39;]
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Tugas&#39;</span><span class="p">,</span><span class="s1">&#39;UTS&#39;</span><span class="p">,</span><span class="s1">&#39;UAS&#39;</span><span class="p">,</span><span class="s1">&#39;Kehadiran&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span>
 
-model = GaussianNB()
-model.fit(x,y)
+<span class="n">model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 
-knio.output_objects[0] = model
-
-Script Predictor:
-python
-import knime.scripting.io as knio
-
-model = knio.input_objects[0]
-
-test_df = knio.input_tables[0].to_pandas()
-
-X_test = test_df[[&#39;Tugas&#39;, &#39;UTS&#39;, &#39;UAS&#39;, &#39;Kehadiran&#39;]]
-
-predictions = model.predict(X_test)
-
-test_df[&#39;Prediksi_Lulus&#39;] = predictions
-
-knio.output_tables[0] = knio.Table.from_pandas(test_df)
-
-Node **Python Script** berfungsi untuk mengintegrasikan kode Python ke dalam workflow KNIME, sehingga memungkinkan penggunaan library machine learning seperti Scikit-learn.
-
-Pada tugas ini, Python Script digunakan untuk:
-- Melatih model klasifikasi **Naive Bayes (GaussianNB)**
-- Melakukan prediksi terhadap data
-- Mengolah data menggunakan library Python
-
-### Scorer
-
-![Scorer](images/score.png)
-
-Node **Scorer** berfungsi untuk mengevaluasi performa model klasifikasi dengan membandingkan hasil prediksi dengan data sebenarnya.
-
-Pada tugas ini, Scorer digunakan untuk menilai seberapa baik model Naive Bayes dalam memprediksi **Status (Lulus / Tidak Lulus)**.
-
-## Kesimpulan
-
-Berdasarkan implementasi algoritma Naive Bayes (GaussianNB) pada dataset kelulusan mahasiswa, dapat disimpulkan bahwa metode ini efektif digunakan untuk melakukan klasifikasi status kelulusan berdasarkan variabel akademik seperti Tugas, UTS, UAS, dan Kehadiran.
-
-Workflow yang dibangun di KNIME menunjukkan bahwa proses klasifikasi dilakukan melalui beberapa tahap penting, yaitu mulai dari pembacaan data, normalisasi, pembagian data training dan testing, pelatihan model menggunakan Python Script, hingga evaluasi menggunakan Scorer.
-
-Hasil dari proses ini menunjukkan bahwa Naive Bayes mampu memprediksi status kelulusan dengan cara menghitung probabilitas setiap kelas berdasarkan fitur yang ada, sehingga menghasilkan keputusan akhir berupa Lulus atau Tidak Lulus.
-
-Secara keseluruhan, metode Naive Bayes cukup sesuai untuk kasus klasifikasi sederhana seperti prediksi kelulusan, karena:
-
-- Mudah diimplementasikan
-- Cepat dalam proses komputasi
-- Cukup akurat untuk data numerik yang terstruktur
+<span class="n">knio</span><span class="o">.</span><span class="n">output_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
 </pre></div>
 </div>
+<p>Script Predictor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">knime.scripting.io</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">knio</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">knio</span><span class="o">.</span><span class="n">input_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">test_df</span> <span class="o">=</span> <span class="n">knio</span><span class="o">.</span><span class="n">input_tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">test_df</span><span class="p">[[</span><span class="s1">&#39;Tugas&#39;</span><span class="p">,</span> <span class="s1">&#39;UTS&#39;</span><span class="p">,</span> <span class="s1">&#39;UAS&#39;</span><span class="p">,</span> <span class="s1">&#39;Kehadiran&#39;</span><span class="p">]]</span>
+
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">test_df</span><span class="p">[</span><span class="s1">&#39;Prediksi_Lulus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predictions</span>
+
+<span class="n">knio</span><span class="o">.</span><span class="n">output_tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">knio</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Node <strong>Python Script</strong> berfungsi untuk mengintegrasikan kode Python ke dalam workflow KNIME, sehingga memungkinkan penggunaan library machine learning seperti Scikit-learn.</p>
+<p>Pada tugas ini, Python Script digunakan untuk:</p>
+<ul class="simple">
+<li><p>Melatih model klasifikasi <strong>Naive Bayes (GaussianNB)</strong></p></li>
+<li><p>Melakukan prediksi terhadap data</p></li>
+<li><p>Mengolah data menggunakan library Python</p></li>
+</ul>
 </section>
+<section id="scorer">
+<h3>Scorer<a class="headerlink" href="#scorer" title="Permalink to this heading">#</a></h3>
+<p><img alt="Scorer" src="_images/score.png" /></p>
+<p>Node <strong>Scorer</strong> berfungsi untuk mengevaluasi performa model klasifikasi dengan membandingkan hasil prediksi dengan data sebenarnya.</p>
+<p>Pada tugas ini, Scorer digunakan untuk menilai seberapa baik model Naive Bayes dalam memprediksi <strong>Status (Lulus / Tidak Lulus)</strong>.</p>
+</section>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permalink to this heading">#</a></h2>
+<p>Berdasarkan implementasi algoritma Naive Bayes (GaussianNB) pada dataset kelulusan mahasiswa, dapat disimpulkan bahwa metode ini efektif digunakan untuk melakukan klasifikasi status kelulusan berdasarkan variabel akademik seperti Tugas, UTS, UAS, dan Kehadiran.</p>
+<p>Workflow yang dibangun di KNIME menunjukkan bahwa proses klasifikasi dilakukan melalui beberapa tahap penting, yaitu mulai dari pembacaan data, normalisasi, pembagian data training dan testing, pelatihan model menggunakan Python Script, hingga evaluasi menggunakan Scorer.</p>
+<p>Hasil dari proses ini menunjukkan bahwa Naive Bayes mampu memprediksi status kelulusan dengan cara menghitung probabilitas setiap kelas berdasarkan fitur yang ada, sehingga menghasilkan keputusan akhir berupa Lulus atau Tidak Lulus.</p>
+<p>Secara keseluruhan, metode Naive Bayes cukup sesuai untuk kasus klasifikasi sederhana seperti prediksi kelulusan, karena:</p>
+<ul class="simple">
+<li><p>Mudah diimplementasikan</p></li>
+<li><p>Cepat dalam proses komputasi</p></li>
+<li><p>Cukup akurat untuk data numerik yang terstruktur</p></li>
+</ul>
 </section>
 </section>
 
@@ -656,8 +663,10 @@ Secara keseluruhan, metode Naive Bayes cukup sesuai untuk kasus klasifikasi sede
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalizer">Normalizer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">Table Partitioner</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-script">Python Script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scorer">Scorer</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
   </nav></div>
 
