@@ -7,7 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - My sample book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Decision Tree &#8212; My sample book</title>
   
   
   
@@ -60,12 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'decision_tree';</script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tugas Naive Bayes" href="naive_bayes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -127,8 +127,6 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -174,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Business Understanding</a></li>
 
 
@@ -222,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="uts.html">UTS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="naive_bayes.html">Tugas Naive Bayes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decision_tree.html">Decision Tree</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Decision Tree</a></li>
 </ul>
 
     </div>
@@ -267,6 +265,54 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/decision_tree.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -300,7 +346,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -309,42 +357,130 @@ document.write(`
 </div>
               
               
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Decision Tree</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-decision-tree">Pengertian Decision Tree 🌳</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-knime">Workflow Knime 📌</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-node-knime">Penjelasan Node Knime 📌</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel-reader">Excel Reader</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">Table Partitioner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-learner">Decision Tree Learner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-predictor">Decision Tree Predictor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-view">Decision Tree View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scorer">Scorer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="decision-tree">
+<h1>Decision Tree<a class="headerlink" href="#decision-tree" title="Permalink to this heading">#</a></h1>
+<section id="pengertian-decision-tree">
+<h2>Pengertian Decision Tree 🌳<a class="headerlink" href="#pengertian-decision-tree" title="Permalink to this heading">#</a></h2>
+<p>Decision Tree adalah salah satu algoritma machine learning untuk klasifikasi dan regresi yang bekerja dengan cara membentuk struktur seperti pohon keputusan.</p>
+<p>Model ini membagi data berdasarkan aturan (rule) dari fitur-fitur yang ada, sehingga menghasilkan cabang (branch) dan daun (leaf) yang berisi hasil keputusan.</p>
+</section>
+<section id="workflow-knime">
+<h2>Workflow Knime 📌<a class="headerlink" href="#workflow-knime" title="Permalink to this heading">#</a></h2>
+<p><img alt="Workflow Knime" src="_images/dec_workflow.png" /></p>
+</section>
+<section id="penjelasan-node-knime">
+<h2>Penjelasan Node Knime 📌<a class="headerlink" href="#penjelasan-node-knime" title="Permalink to this heading">#</a></h2>
+<section id="excel-reader">
+<h3>Excel Reader<a class="headerlink" href="#excel-reader" title="Permalink to this heading">#</a></h3>
+<p><img alt="Excel Reader" src="_images/exc_read.png" /></p>
+<p>Node Excel Reader digunakan untuk mengimpor data dari file Microsoft Excel (.xlsx) ke dalam workflow KNIME.</p>
+<p>Fungsi utamanya:</p>
+<p>Membaca dataset yang sudah disimpan dalam bentuk tabel Excel
+Mengubah data Excel menjadi format tabel KNIME agar bisa diproses lebih lanjut
+Menentukan sheet mana yang akan digunakan jika file memiliki beberapa sheet</p>
+</section>
+<section id="table-partitioner">
+<h3>Table Partitioner<a class="headerlink" href="#table-partitioner" title="Permalink to this heading">#</a></h3>
+<p><img alt="Table Partitioner" src="_images/tab_part.png" /></p>
+<p>Table Partitioning berfungsi untuk memisahkan data menjadi:</p>
+<ul class="simple">
+<li><p>Data training → digunakan untuk melatih model (misalnya Decision Tree Learner)</p></li>
+<li><p>Data testing → digunakan untuk menguji atau mengevaluasi model</p></li>
+</ul>
+<p>Pembagian ini penting agar model tidak hanya “menghafal” data, tetapi juga mampu melakukan prediksi pada data baru.</p>
+</section>
+<section id="decision-tree-learner">
+<h3>Decision Tree Learner<a class="headerlink" href="#decision-tree-learner" title="Permalink to this heading">#</a></h3>
+<p><img alt="Decision Tree Learner" src="_images/dec_tree_le.png" /></p>
+<p>Decision Tree Learner adalah node di KNIME yang digunakan untuk membangun model klasifikasi atau regresi berbasis pohon keputusan dari data training.</p>
+<p>Node ini mempelajari pola hubungan antara fitur (input) dan target (label) dengan cara membagi data secara bertahap berdasarkan kondisi tertentu hingga membentuk struktur pohon.</p>
+</section>
+<section id="decision-tree-predictor">
+<h3>Decision Tree Predictor<a class="headerlink" href="#decision-tree-predictor" title="Permalink to this heading">#</a></h3>
+<p><img alt="Decision Tree Predictor" src="_images/dec_prec.png" /></p>
+<p>Decision Tree Predictor adalah node di KNIME yang digunakan untuk melakukan prediksi kelas pada data baru atau data uji menggunakan model yang telah dibuat oleh Decision Tree Learner.</p>
+<p>Node ini menerapkan aturan-aturan (IF–THEN) yang sudah terbentuk pada model untuk menentukan hasil klasifikasi dari setiap data.</p>
+</section>
+<section id="decision-tree-view">
+<h3>Decision Tree View<a class="headerlink" href="#decision-tree-view" title="Permalink to this heading">#</a></h3>
+<p><img alt="Decision Tree View" src="_images/dec_tree_view.png" /></p>
+<p>Decision Tree View adalah node di KNIME yang digunakan untuk menampilkan visualisasi model Decision Tree dalam bentuk struktur pohon yang mudah dipahami.</p>
+<p>Node ini membantu pengguna melihat bagaimana model mengambil keputusan berdasarkan fitur-fitur yang digunakan.</p>
+<p>Output :</p>
+<p><img alt="Decision Tree View" src="_images/dec_tree_viewout.png" /></p>
+</section>
+<section id="scorer">
+<h3>Scorer<a class="headerlink" href="#scorer" title="Permalink to this heading">#</a></h3>
+<p><img alt="Scorer" src="_images/dec_scorer.png" /></p>
+<p>Scorer adalah node di KNIME yang digunakan untuk mengevaluasi kinerja model klasifikasi dengan membandingkan hasil prediksi dengan nilai sebenarnya (actual).</p>
+<p>Node ini sangat penting karena menunjukkan seberapa baik model (Decision Tree) dalam melakukan prediksi.</p>
+</section>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permalink to this heading">#</a></h2>
+<p>Workflow Decision Tree di KNIME merupakan rangkaian proses untuk membangun, menguji, dan mengevaluasi model klasifikasi secara sistematis.</p>
+<p>Proses dimulai dari Excel Reader untuk mengambil data, kemudian (jika diperlukan) dilakukan preprocessing agar data bersih dan siap digunakan. Setelah itu, data dibagi menggunakan Table Partitioning menjadi data training dan testing.</p>
+<p>Selanjutnya, model dibangun menggunakan Decision Tree Learner, yang menghasilkan pohon keputusan berdasarkan pola dalam data. Model tersebut kemudian digunakan oleh Decision Tree Predictor untuk melakukan prediksi pada data uji. Hasil prediksi ini divisualisasikan melalui Decision Tree View agar mudah dipahami, dan akhirnya dievaluasi menggunakan Scorer untuk mengetahui tingkat akurasi dan performa model.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
     }
-  </script>
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
 
               
               
@@ -353,12 +489,47 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="naive_bayes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas Naive Bayes</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-decision-tree">Pengertian Decision Tree 🌳</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-knime">Workflow Knime 📌</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-node-knime">Penjelasan Node Knime 📌</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel-reader">Excel Reader</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">Table Partitioner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-learner">Decision Tree Learner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-predictor">Decision Tree Predictor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-view">Decision Tree View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scorer">Scorer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
