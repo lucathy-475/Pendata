@@ -24,3 +24,4 @@ chapters:
   - file: uts
   - file: naive_bayes
   - file: decision_tree
+  - file: reg_linier
