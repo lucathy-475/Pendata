@@ -26,3 +26,4 @@ chapters:
   - file: decision_tree
   - file: reg_linier
   - file: pendataTW
+  - file: Forecaster_explainability
